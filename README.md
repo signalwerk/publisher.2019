@@ -24,7 +24,7 @@ Erscheinungsdatum: 2.9.2019
 
 Titelvorschlag: «Typografische Systeme im Web»
 
-Der Artikel soll zeigen, wie man heute ein dynamisches Schriften- und Titel-System für Websites aufbaut. Dabei wird behandelt, welche «Logiken» es zu beachten gibt und wie Breakpoints sich auf die Gestaltung auswirken sollte. Zudem wird kritisch betrachtet, was für «Fehler» heute häufig anzutreffen sind und weshalb gute Typografie ein geschultes Auge und einiges an Technik braucht.
+Der Artikel soll zeigen, wie man heute ein dynamisches Schriften- und Titel-System für Websites aufbaut. Dabei wird behandelt, welche «Logiken» es zu beachten gibt und wie Breakpoints sich auf die Gestaltung auswirken sollten. Zudem wird kritisch betrachtet, was für «Fehler» heute häufig anzutreffen sind und weshalb gute Typografie ein geschultes Auge und einiges an Technik braucht.
 
 
 ## Publisher 5-19 
@@ -32,7 +32,7 @@ Erscheinungsdatum: 14.10.2019
 
 Titelvorschlag: «Raster und Module im Web»
 
-Lange Zeit waren im Web hauptsächlich nur Spalten-Aufteilungen sinnvoll umzusetzen. Seit einigen Jahren gibt es jedoch erweiterte CSS-Möglichkeiten (Flexbox), wie man eine Gestaltung einfacher realisieren kann. Und nun da CSS-Grids verbreitet sind, gibt es noch einmal eine erweiterte flexibilität, wie ein Raster aufgebaut werden kann. Der Artikel soll Möglichkeiten aufzeigen und motivieren neue Formen von Gestaltung im Web zu testen. 
+Lange Zeit waren im Web hauptsächlich nur Spalten-Aufteilungen sinnvoll umzusetzen. Seit einigen Jahren gibt es jedoch erweiterte CSS-Möglichkeiten (Flexbox), wie man eine Gestaltung einfacher und freier realisieren kann. Und nun da CSS-Grids verbreitet sind, gibt es noch einmal eine erweiterte flexibilität, wie ein Raster aufgebaut werden kann. Der Artikel soll Möglichkeiten aufzeigen und motivieren neue Formen von Technik/Gestaltung im Web zu testen um lebendigere Websites zu erhalten.
 
 
 ## Publisher 6-19 
