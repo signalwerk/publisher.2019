@@ -21,3 +21,6 @@ Titel: «Typografie für's Web»
 Erscheinungsdatum: 14.10.2019
 
 Titel: «Grids für's Web»
+
+## Publisher 6-19 
+Erscheinungsdatum: 9.12.2019
