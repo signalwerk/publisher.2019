@@ -2,11 +2,11 @@
 Artikel-Serie für [Publisher](https://publisher.ch/).
 
 ## Lizenzen
-Die erarbeiteten Inhalte werden von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) erarbeitet und (öffentlich) zugänglich gemacht. [Publisher](https://publisher.ch/) erhält das Recht die Inhalte auch ohne Copyleft (Share Alike) zu publizieren.
+Die erarbeiteten Inhalte werden von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) erarbeitet und (öffentlich) zugänglich gemacht. [Publisher](https://publisher.ch/) erhält das Recht die Inhalte ohne Copyleft (Share Alike) zu publizieren.
 
 ## Zu klärende Fragen
 * Gibt es interesse an den vorgeschlagenen Artikeln?
-* Wie lange soll der Umfang der Artikel sein? 
+* Wie lange sollte der Umfang der Artikel sein? 
 * Honorar?
 * Wann ist der jeweilige Redaktionsschluss?
 
