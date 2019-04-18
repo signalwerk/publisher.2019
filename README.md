@@ -13,3 +13,11 @@ Titel: «Frontend-Framework – Websites heute»
 
 ## Publisher 4-19 
 Erscheinungsdatum: 2.9.2019
+
+Titel: «Typografie für's Web»
+
+
+## Publisher 5-19 
+Erscheinungsdatum: 14.10.2019
+
+Titel: «Grids für's Web»
