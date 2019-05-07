@@ -5,10 +5,10 @@ Artikel-Serie für [Publisher](https://publisher.ch/).
 Die erarbeiteten Inhalte werden von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) erarbeitet und (öffentlich) zugänglich gemacht. [Publisher](https://publisher.ch/) erhält das Recht die Inhalte ohne Copyleft (Share Alike) zu publizieren.
 
 ## Zu klärende Fragen
-* Gibt es interesse an den vorgeschlagenen Artikeln?
-* Wie lange sollte der Umfang der Artikel sein? 
-* Honorar?
-* Wann ist der jeweilige Redaktionsschluss?
+* Gibt es interesse an den vorgeschlagenen Artikeln? – Zusage erhalten
+* Wie lange sollte der Umfang der Artikel sein? – Etwa 2 – 3 Seiten. Pro Seite 4000 – 5000 Zeichen
+* Honorar? – CHF 150.–/Seite
+* Wann ist der jeweilige Redaktionsschluss? – siehe [Wiki](https://github.com/signalwerk/publisher.2019/wiki/Produktionsplan-Publisher-2019)
 
 
 ## Publisher 3-19 
