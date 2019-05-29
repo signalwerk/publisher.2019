@@ -1,11 +1,31 @@
-## Publisher 3-19 
+## Publisher 3-19
 Erscheinungsdatum: 24.6.2019
 
 Titelvorschlag: «Frontend-Frameworks – Websites heute»
 
-Der Artikel soll die grundlegenden Unterschiede zeigen, wie Websites früher mittels auslieferung von HTML-Dateien gebaut wurden und wie heute Frontend-Frameworks (React, Vue, Angular) eine Website im Browser zusammensetzen und nur noch Inhalte über eine API geladen werden. Das Ziel ist es dem Leser mittels Text und Grafiken zu vermitteln, was die grundlegenden Unterschiede sind und wie heute «Komponenten» zu Websites zusammengesteckt werden. Allenfalls die [Werbewoche](https://www.werbewoche.ch/) als Beispiel (hatte ich mitgearbeitet). 
+Der Artikel soll die grundlegenden Unterschiede zeigen, wie Websites früher mittels auslieferung von HTML-Dateien gebaut wurden und wie heute Frontend-Frameworks (React, Vue, Angular) eine Website im Browser zusammensetzen und nur noch Inhalte über eine API geladen werden. Das Ziel ist es dem Leser mittels Text und Grafiken zu vermitteln, was die grundlegenden Unterschiede sind und wie heute «Komponenten» zu Websites zusammengesteckt werden. Allenfalls die [Werbewoche](https://www.werbewoche.ch/) als Beispiel (hatte ich mitgearbeitet).
 
+<style>
+.twoCol {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: flex;
+}
 
+.col-1, .col-2 {
+  max-width: 48.5%;
+  flex-basis: 48.5%;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.col-all {
+  max-width: 100%;
+  flex-basis: 100%;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+</style>
 
 ---
 
@@ -14,33 +34,62 @@ Der Artikel soll die grundlegenden Unterschiede zeigen, wie Websites früher mit
 ## Websites Gestern
 Einhergehend mit der Entwicklung seines Hypertext-Formates HTML, schuf Tim Berners-Lee ab 1989 am CERN in Genf den ersten Webbrowser (gleichzeitig auch Web-Editor) mit dem Namen WorldWideWeb (später Nexus). Der Browser konnte zwar schon Sprungmarken (Links) und somit Information verknüpfen, jedoch war der Fokus primär in der Vermittlung und dem zugänglich machen von Information. Das heute so genannte «User Experience» (UX) hatte hinten an zu stehen.
 
----
-
-![WorldWideWeb Browser](https://signalwerk.github.io/webdesign.IAD/browser/img/WorldWideWeb.1.png)
-WorldWideWeb Browser  
-Erster Browser, jedoch noch ohne eingebetteten Bildern.  
-Bild-Quelle: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:WorldWideWeb.1.png)  
-
----
 
 
-Technisch ist das Konzept von statischen Websites relativ schnell und einfach zu verstehen und auch heute werden noch viele Websites meist wie folgt aufgebaut. 
+Technisch ist das Konzept von statischen Websites relativ schnell und einfach zu verstehen und auch heute werden noch viele Websites meist wie folgt aufgebaut.
 
-```
-Hier grafik
-```
-1. User erfrägt Seite (HTML) von Server über eine URL
+
+<div class="twoCol">
+
+<div class="col-all">
+
+![Traditioneller HTML-Abruf](./img/html-traditional.svg)
+
+</div>
+
+</div>
+
+1. User erfragt Seite (HTML) von Server über eine URL
 2. Server Liefert HTML-Seite
-3. Browser erfragt weitere Resourcen wie Bilder, Stylesheets, ... 
+3. Browser erfragt weitere Resourcen wie Bilder, Stylesheets, ...
 4. Website wird fertig dargestellt (rendering)
 
 
 Schauen wir uns die HTML Seite an.
 
+
+<div class="twoCol">
+
+<div class="col-1">
+
+![Ganze HTML Seite](./img/html-all.svg)
+
+</div>
+
+<div class="col-2">
+
+![HTML Seite Inhalt und Semantik](./img/html-types.svg)
+
+</div>
+
+</div>
+
+
+
+
+
+
+<!--
 ```html
-<h1 class="special">Titel</h1>
-<p class="newsflash">Heute neu!</p>
+<html>
+  <body>
+    <h1 class="special">Titel</h1>
+    <p class="newsflash">Heute neu!</p>
+  </body>
+</html>
+
 ```
+-->
 
 
 ((vereinfachte Darstellung))
