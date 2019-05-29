@@ -41,3 +41,7 @@ Erscheinungsdatum: 9.12.2019
 Titelvorschlag: «Mikrotypografie im Web»
 
 Der Artikel zeigt, wo im Web überall schlechte Mikrotypografie anzutreffen ist und soll die nötigen Informationen parat stellen um auch im eigenen CMS künftig gute Mikrotypografie ganz ohne Programmierung/CSS anzuwenden. Dazu werden verschiedene Beispiele gezeigt und erklärt, wie das richtige Zeichen am richtigen Ort einen Unterschied machen kann.
+
+
+
+[![Build Status](https://ci.signalwerk.ch/api/badges/signalwerk/publisher.2019/status.svg)](https://ci.signalwerk.ch/signalwerk/publisher.2019)
