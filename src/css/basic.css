@@ -1,0 +1,43 @@
+/* inspiration
+- https://alligator.io/css/minimal-css-reset/
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+:root {
+  --green-color: #006984;
+  --blue-color: #0054a2;
+  --gray-color: #e6e8ea;
+}
+
+::selection {
+  background: var(--blue-color);
+  color: white;
+  text-shadow: none;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.45;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+p,
+ol,
+ul {
+  font-size: 1rem;
+}
