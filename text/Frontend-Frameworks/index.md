@@ -108,13 +108,10 @@ Um nun die vollständige Seite darzustellen (rendering) müssen nur noch die Dat
 ## Vom Server zur Komponente
 Dieses Verfahren hat insbesondere dann grosse Vorteile, wenn mehrere Seiten besucht werden, bei denen in den weiteren Seiten nur noch die Daten und nicht mehr die Templates geladen werden müssen.
 
+
 <div class="next-bg"></div>
 
-<div class="grid-12col">
-  <div class="col-all">
-    <img src="./img/html-new.svg" alt="Website-Abruf heute" />
-  </div>
-</div>
+![Website-Abruf heute](./img/html-new.svg)
 
 
 1. User erfragt die Seite vom Server über eine URL oder Link
