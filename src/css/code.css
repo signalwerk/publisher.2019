@@ -1,6 +1,7 @@
 
 pre,
 code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   background-color: var(--gray-color);
   border-radius: 0.2em;
   font-size: 85%;

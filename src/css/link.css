@@ -12,21 +12,8 @@ a:hover {
     color: inherit;
 }
 
-
 @media print {
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-}
-
-a:before {
-    content: "→ ";
-}
-
-/* hide arrow before external links  */
-a[href^="http"]:before,
-a[href^="slack:"]:before,
-a[href^="mailto:"]:before,
-a[href^="tel:"]:before {
-  display: none;
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+  }
 }

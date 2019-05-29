@@ -1,17 +1,12 @@
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1rem 0;
-  padding: 0;
+  border: none;
+  height: 0.3rem;
+  background-color: var(--gray-color);
+
+  margin-bottom: 2.3rem;
+  margin-top: 2rem;
 }
 
 hr.thick {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1rem solid #ccc;
-  margin: 1rem 0;
-  padding: 0;
+  height: 1rem;
 }

@@ -1,8 +1,17 @@
 .content {
-  padding-top: 1.5rem;
-  margin: 0 auto;
-  max-width: 40rem;
-  width: 97%;
+  width: 92%;
+  max-width: 38rem;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0;
+  padding-bottom: 2rem;
+}
+
+@media print {
+  .content {
+    margin-right: 0;
+  }
 }
 
 .grid-12col {
@@ -18,7 +27,6 @@
   flex-shrink: 1;
   flex-grow: 1;
 }
-
 
 .col-1to4 {
   max-width: 32.333%;

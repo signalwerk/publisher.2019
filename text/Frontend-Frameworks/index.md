@@ -9,7 +9,7 @@ Dieser Text ist von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativ
 <hr class="thick"  />
 
 
-# Frontend-Frameworks – Websites im 2019
+# Frontend-Frameworks – Websites heute
 
 > Bei der Interaktion mit einer Website erwarten User eine flüssige Reaktion des Interfaces. Seit einigen Jahren sind so genannte «Frontend-Frameworks» im Web stark verbreitet, so dass der Browser die Darstellung ab dem ersten Laden selber übernehmen kann, was ab da zu einem besseren Nutungserlebins führt.
 
