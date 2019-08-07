@@ -7,12 +7,12 @@ Erscheinungsdatum · 2. 9. 2019
 Dieser Text ist von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) veröffentlicht. [Publisher](https://publisher.ch/) erhält das Recht die Inhalte ohne Copyleft (Share Alike) zu publizieren.
 
 <hr class="thick"  />
-[CMYK Bilder für Print (pdf)](./typo-systems_graphics_cmyk.pdf)
+[CMYK Bilder für Print (pdf)](./design-systems_graphics_cmyk.pdf)
 <hr class="thick"  />
 
 # Design-Systeme im Web
 
-> Beim Grafik-Design auf physischen Meiden (Papier) kennt die Gestaltung den zu kommunizierenden Inhalt, wie auch die Grösse des Ausgabemendiums. Bei der Arbeit mit modernen Websites ist bei der Entwicklung der Inhalt oftmals erst eine Idee und die Ausgabebedingungen werden durch die Geräte bei den Endkunden stets neu defineirt. Das Layout hat sich entsprechend zu Fügen und muss dem Inhalt gerecht werden. Eine Herausforderung! 
+> Beim Grafik-Design auf physischen Meiden (Papier) kennt die Gestaltung den zu kommunizierenden Inhalt, wie auch die Grösse des Ausgabemendiums. Bei der Arbeit mit modernen Websites ist bei der Entwicklung der Inhalt oftmals erst eine Idee und die Ausgabebedingungen werden durch die Geräte bei den Endkunden stets neu defineirt. Das Layout hat sich entsprechend zu Fügen und muss dem Inhalt gerecht werden. Eine Herausforderung!
 
 
 ## Gestaltung war früher
