@@ -7,7 +7,7 @@ Erscheinungsdatum · 24. 6. 2019
 Dieser Text ist von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) veröffentlicht. [Publisher](https://publisher.ch/) erhält das Recht die Inhalte ohne Copyleft (Share Alike) zu publizieren.
 
 <hr class="thick"  />
-![CMYK Bilder für Print (pdf)](./frontend-frameworks_graphics_cmyk.pdf)
+[CMYK Bilder für Print (pdf)](./frontend-frameworks_graphics_cmyk.pdf)
 <hr class="thick"  />
 
 
