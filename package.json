@@ -5,8 +5,8 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack",
-    "mdA": "showdown makehtml -i ./text/Frontend-Frameworks/index.md -o ./text/Frontend-Frameworks/index.html",
-    "mdB": "showdown makehtml -i ./text/typo-systems/index.md -o ./text/typo-systems/index.html",
+    "mdA": "showdown makehtml -i ./text/frontend-frameworks/index.md -o ./text/frontend-frameworks/index.html",
+    "mdB": "showdown makehtml -i ./text/design-systems/index.md -o ./text/design-systems/index.html",
     "dev": "watch -n20 sh ./ci/build.sh",
     "start": "webpack-dev-server"
   },
