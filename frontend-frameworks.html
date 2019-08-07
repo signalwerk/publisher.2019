@@ -1,0 +1,99 @@
+<html lang="de">
+   <head>
+      <meta charset="utf-8">
+      <title>Publisher</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <div class="content">
+        <!-- page content start-->
+<h2 id="publisher32019">Publisher 3 · 2019</h2>
+<p>Erscheinungsdatum · 24. 6. 2019</p>
+<hr class="thick"  />
+<h2 id="lizenzen">Lizenzen</h2>
+<p>Dieser Text ist von Stefan Huber unter der Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a> veröffentlicht. <a href="https://publisher.ch/">Publisher</a> erhält das Recht die Inhalte ohne Copyleft (Share Alike) zu publizieren.</p>
+<p><hr class="thick"  />
+<a href="./frontend-frameworks_graphics_cmyk.pdf">CMYK Bilder für Print (pdf)</a></p>
+<hr class="thick"  />
+<h1 id="frontendframeworkswebsitesheute">Front-End Frameworks – Websites heute</h1>
+<blockquote>
+  <p>Bei der Interaktion mit einer Website erwarten User eine flüssige Reaktion des Interface. Seit einigen Jahren sind sogenannte «Front-End Frameworks» im Web stark verbreitet, sodass der Browser die Darstellung ab dem ersten Laden selber übernehmen kann, was ab da zu einem besseren Nutzungserlebnis führt.</p>
+</blockquote>
+<h2 id="websitesgestern">Websites – gestern</h2>
+<p>Einhergehend mit der Entwicklung seines Hypertext-Formates HTML, schuf Tim Berners-Lee ab 1989 am CERN in Genf den ersten Webbrowser (gleichzeitig auch Web-Editor) mit dem Namen WorldWideWeb (später Nexus). Der Browser konnte zwar schon Sprungmarken (Links) und somit Informationen verknüpfen, jedoch lag der Fokus primär auf der Vermittlung und dem Zugänglichmachen von Information. Die heute sogenannte «User Experience» (UX) war primär über den Inhalt und weder über die Gestaltung noch über die Interaktion bestimmt.</p>
+<h2 id="htmlalscontainerfrinhalt">HTML als Container für Inhalt</h2>
+<p>Bei der genaueren Untersuchung einer reduzierten HTML-Seite ist schnell zu erkennen, dass der Inhalt nur einen Teil der Seite ausmacht und die innere Struktur der Seite (Semantik) mindestens genauso wichtig ist. Zusammen mit dem Styling über CSS (Cascading Style Sheets) wird dann die Darstellung errechnet.</p>
+<div class="next-bg"></div>
+<p><img src="./img/html-types.svg" alt="HTML Seite Inhalt, Semantik und Darstellung" /></p>
+<!--<pre><code class="html language-html">&lt;html&gt;
+  &lt;body&gt;
+    &lt;div class="teaser"&gt;
+      &lt;img src=""/&gt;
+      &lt;h1 class="special"&gt;&lt;/h1&gt;
+      &lt;p class="newsflash"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="teaser"&gt;
+      &lt;img src=""/&gt;
+      &lt;h1 class="special"&gt;&lt;/h1&gt;
+      &lt;p class="newsflash"&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+-->
+<p>Ausgeliefert wird klassisch jedoch nicht geteilt nach Daten und Struktur, sondern in einer Kombination. Die HTML-Datei enthält Semantik und Inhalt.
+Die Inhalte sind traditionell in einer Datenbank von der Redaktion abgespeichert worden und der Server fügt in die entsprechende Stelle im HTML diese Inhalte ein.</p>
+<div class="next-bg"></div>
+<p><img src="./img/html-all.svg" alt="Ganze HTML Seite" /></p>
+<p>Das Beispiel zeigt im Wesentlichen folgende Strukturen:</p>
+<ul>
+<li>Seitenstruktur (<code>&lt;html/&gt; &lt;body/&gt;</code>)</li>
+<li>Zwei Teaser (<code>&lt;div class="teaser"/&gt;</code>)</li>
+<li>ein Titel (<code>&lt;h1/&gt;</code>) je Tease</li>
+<li>ein Text (<code>&lt;p/&gt;</code>) je Teaser</li>
+<li>ein Bild (<code>&lt;img/&gt;</code>) je Teaser</li>
+</ul>
+<h2 id="vomserverbiszumbrowser">Vom Server bis zum Browser</h2>
+<p>Technisch ist das Abrufen von HTML-Websites in wenige Schritte gegliedert und auch heute werden noch viele Seiten meist wie folgt aufgebaut.</p>
+<div class="next-bg"></div>
+<p><img src="./img/html-traditional.svg" alt="Traditioneller HTML-Abruf" /></p>
+<ol>
+<li>User erfragt die Seite vom Server über eine URL oder einen Link.</li>
+<li>Server liefert HTML-Seite.</li>
+<li>Browser erfragt weitere Ressourcen wie Bilder, Stylesheets (CSS) usw.</li>
+<li>Website wird fertig dargestellt (Rendering).</li>
+<li>Bei einem Klick auf einen Link geht der Prozess mit der neuen Seite von Neuem los.</li>
+</ol>
+<h2 id="websitesheute">Websites – heute</h2>
+<p>Da das zeitaufwendige Laden der ganzen Website nach jedem Klick keine ideale User Experience erlaubt, werden heute Semantik und Daten gerne auseinandergenommen. Die «Templates» (Semantik) für die Komponenten beinhalten auch das Styling und werden nur einmal vom Server übertragen. Wird dieselbe Komponente später noch einmal benutzt, so werden nur die Daten ausgetauscht. Dies kann der Browser mithilfe eines sogenannten «Front-End Framework» selbstständig tun und beim Server müssen nur die Inhalte erfragt werden. Das spart Daten und es kann sehr schnell auf Eingaben des Benutzers reagiert werden. Auch das Konzept von «Seiten» ist aufgelöst. Eine neue Seite ist in so einem Framework nur noch eine Komponente, die mit anderen Inhalten gefüllt wird. Auch wenn der Benutzer glaubt, auf eine andere URL zu wechseln, so tauscht der Browser lediglich die Inhalte aus und das Grundgerüst der Website bleibt erhalten.</p>
+<p>Vereinfacht könnte eine Komponente einer Seite so aussehen:</p>
+<div class="next-bg"></div>
+<p><img src="./img/html-component-page.svg" alt="Page Komponente" /></p>
+<p>Innerhalb dieser Seite wird dann die Teaser-Komponente mehrfach verwendet:</p>
+<div class="next-bg"></div>
+<p><img src="./img/html-component-teaser.svg" alt="Teaser Komponente" /></p>
+<p>Um nun die vollständige Seite darzustellen (Rendering), müssen nur noch die Daten in die jeweiligen Komponenten eingefüllt werden.</p>
+<div class="next-bg"></div>
+<p><img src="./img/html-component-rendering.svg" alt="HTML Seite dargestellt" /></p>
+<h2 id="vomserverzurkomponente">Vom Server zur Komponente</h2>
+<p>Heutige Verfahren haben insbesondere dann grosse Vorteile, wenn mehrere Seiten besucht werden, bei denen in den Folgeseiten nur noch die Daten und nicht mehr die Templates geladen werden müssen.</p>
+<div class="next-bg"></div>
+<p><img src="./img/html-new.svg" alt="Website-Abruf heute" /></p>
+<ol>
+<li>User erfragt die Seite vom Server über eine URL oder einen Link.</li>
+<li>Server liefert JavaScript, eingebunden in einer HTML-Seite.</li>
+<li>Browser erfragt Daten und Bilder.</li>
+<li>Website wird fertig dargestellt (Rendering).</li>
+<li>Bei einem Klick auf einen Link werden nur noch Daten und Bilder angefragt.</li>
+<li>Die Darstellung wird neu im Browser gerechnet. Es müssen nur noch die neuen Daten erfragt werden, nicht aber die Semantik, da die Komponenten-Templates bereits geladen sind.</li>
+</ol>
+<h2 id="ausblick">Ausblick</h2>
+<p>Seit etwa 2010 sind die ersten Front-End Frameworks (<a href="https://backbonejs.org/">Backbone</a> Framework) auf grossen Websites im Einsatz. Firmen wie Google (<a href="https://angular.io/">Angular</a> Framework) oder Facebook (<a href="https://reactjs.org/">React</a> Framework) haben ihre Produkte bereits grossflächig auf diese neuen Technologien umgestellt. Aber auch lokale Portale wie zum Beispiel <a href="https://www.werbewoche.ch/">werbewoche.ch</a> nutzen die Technologie aktiv. Da diese Frameworks von immer mehr Web-Entwicklern erlernt werden und die bessere User Experience vermehrt von Kunden erfragt wird, darf man sich auch in Zukunft auf noch interaktivere und responsivere Seiten freuen.</p>
+<hr class="thick"  />
+<h3 id="autor">Autor</h3>
+<p>Stefan Huber unterrichtet an der <a href="https://sfgz.ch/">Schule für Gestaltung Zürich</a> im Lehrgang HF Interaction Design und ist als Web-Entwickler tätig.</p>
+<hr class="thick"  />
+        <!-- page content end -->
+      </div>
+   <script type="text/javascript" src="./index.js"></script></body>
+</html>
