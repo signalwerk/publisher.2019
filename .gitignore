@@ -2,3 +2,5 @@
 /node_modules
 ci/.ssh/id_rsa
 ci/.ssh/secret.key
+/text/typo-systems/index.html
+/text/Frontend-Frameworks/index.html
