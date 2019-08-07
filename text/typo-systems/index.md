@@ -12,8 +12,7 @@ Dieser Text ist von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativ
 
 # Design-Systeme im Web
 
-> Während beim Grafik-Design auf physischen Meiden die gestaltende Person meist den zu kommunizierenden Inhalt, wie auch die Dimension des Ausgabemendiums kennt, ist bei der Arbeit mit modernen Websites bei der Entwicklung nur eine Idee des später entstehenden Inhalts vorhanden und die Ausgabebedingungen werden durch die Geräte bei den Endkunden stets neu defineirt. Das Layout hat sich entsprechend zu Fügen. Eine Herausforderung!
-
+> Beim Grafik-Design auf physischen Meiden (papier) kennt die Gestaltung den zu kommunizierenden Inhalt, wie auch die Grösse des Ausgabemendiums. Bei der Arbeit mit modernen Websites ist bei der Entwicklung der Inhalt oftmals erst eine Idee und die Ausgabebedingungen werden durch die Geräte bei den Endkunden stets neu defineirt. Das Layout hat sich entsprechend zu Fügen. Eine Herausforderung! 
 
 
 ## Gestaltung war früher
