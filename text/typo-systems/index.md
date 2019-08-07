@@ -7,7 +7,8 @@ Erscheinungsdatum · 2. 9. 2019
 Dieser Text ist von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) veröffentlicht. [Publisher](https://publisher.ch/) erhält das Recht die Inhalte ohne Copyleft (Share Alike) zu publizieren.
 
 <hr class="thick"  />
-
+![CMYK Bilder für Print (pdf)](./typo-systems_graphics_cmyk.pdf)
+<hr class="thick"  />
 
 # Design-Systeme im Web
 
@@ -26,7 +27,7 @@ In einem traditionellen Design-Verständnis hat ein Kunde einen Inhalt, den er m
 ![Traditionelles Design](./img/design-web.svg)
 
 
-In der Gestaltung im Web-Umfeld sind Inhalte oftmals nicht abgeschlossen oder entstehen erst. Die Website dient als ein Kommunikationskanal, welcher vielfältig eingesetzt wird und der oftmals einem Bedürfnis und nicht einem konkreten Plan folgt. Spätestens seit Marshall McLuhans bekanntem Zitat «The medium is the message» ist klar, dass das Medium nicht nur Nachricht zu transportieren hat, sondern diese auch wesentlich formt, beeinflusst oder gar ersetzt. Somit muss die Gestaltung ein System oder ein Regelsatz erarbeiten, welches dann später mit «Inhalten» angereichert wird. Es geht nicht darum genau für einen Inhalt oder für ein Bedürfnis zu gestalten, sondern es muss eine Idee oder ein Konzept unterstützt werden, welches später erst durch den «Inhalt» leben erhält. 
+In der Gestaltung im Web-Umfeld sind Inhalte oftmals nicht abgeschlossen oder entstehen erst. Die Website dient als ein Kommunikationskanal, welcher vielfältig eingesetzt wird und der oftmals einem Bedürfnis und nicht einem konkreten Plan folgt. Spätestens seit Marshall McLuhans bekanntem Zitat «The medium is the message» ist klar, dass das Medium nicht nur Nachricht zu transportieren hat, sondern diese auch wesentlich formt, beeinflusst oder gar ersetzt. Somit muss die Gestaltung ein System oder ein Regelsatz erarbeiten, welches dann später mit «Inhalten» angereichert wird. Es geht nicht darum genau für einen Inhalt oder für ein Bedürfnis zu gestalten, sondern es muss eine Idee oder ein Konzept unterstützt werden, welches später erst durch den «Inhalt» leben erhält.
 
 
 ## Templates – wie langweilig
@@ -36,7 +37,7 @@ In der Gestaltung im Web-Umfeld sind Inhalte oftmals nicht abgeschlossen oder en
 
 Bei einfachen Templates für Websites oder bei Website-Generatoren gibt es oftmals nur ein paar wenige «Grundlayouts», die man dann mit Inhaltstypen abfüllen kann. Oftmals kommt sogar lediglich ein Template für die Startseite und ein Template für den «Inhalt» zur Anwendung. Die Kommunikation muss also zwangsläufig dem Template angepasst werden oder noch schlimmer; der Inhalt passt gar nicht erst in die Templatestruktur. «Das geht nicht» oder «Unser CMS kann das nicht» kommt von der Web-Redaktion als Rückmeldung auf einen inhaltlichen Wunsch. Doch die Technik soll inspirieren und nicht Denkbarrieren schaffen.
 
-## Module und Komponenten 
+## Module und Komponenten
 ![Design Module](./img/design-modules.svg)
 *Bei Modulen/Komponenten kommen immer wieder die selben Grundbausteine in einem fix definierten Regelwerk vor. Jedoch ist die Vielfalt durch ein flexibles Zusammenwirken stets gegebenen.*
 
@@ -54,7 +55,7 @@ Da die Gestaltung nicht mehr an ein fest definiertes Ausgabemedium gebunden ist,
 *Wurde das Design zu sehr mit den Prinzipien eines kleinen Viewports (Mobile) gestaltet, so wirkt die Gestaltung auf Desktop-Geräten zu kontrastarm und der Grunddtext wirkt zu gross.*
 
 ## Fazit
-Die Gestaltung von Websites hat viele Variablen und soll mittels einem Regelsatz die Redaktion von Design-Entscheidungen entlasten. Die Spezialisten für den Inhalt sollen sich diesem voll und ganz hingeben können und die Spezialistinnen für die Gestaltung sollen ein Regelsystem und eine Gestaltung aufbauen, die dem Inhalt und den diversen Ausgabegeräten gerecht wird. 
+Die Gestaltung von Websites hat viele Variablen und soll mittels einem Regelsatz die Redaktion von Design-Entscheidungen entlasten. Die Spezialisten für den Inhalt sollen sich diesem voll und ganz hingeben können und die Spezialistinnen für die Gestaltung sollen ein Regelsystem und eine Gestaltung aufbauen, die dem Inhalt und den diversen Ausgabegeräten gerecht wird.
 
 <hr class="thick"  />
 
