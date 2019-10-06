@@ -7,8 +7,9 @@
     "build": "NODE_ENV=production webpack",
     "mdA": "showdown makehtml -i ./text/frontend-frameworks/index.md -o ./text/frontend-frameworks/index.html",
     "mdB": "showdown makehtml -i ./text/design-systems/index.md -o ./text/design-systems/index.html",
-    "dev": "watch -n20 sh ./ci/build.sh",
-    "start": "webpack-dev-server"
+    "mdC": "showdown makehtml -i ./text/webtypo-space/index.md -o ./text/webtypo-space/index.html",
+    "start": "watch -n20 sh ./ci/build.sh",
+    "start--server": "webpack-dev-server"
   },
   "author": "Stefan Huber (Signalwekr GmbH)",
   "license": "MIT",
