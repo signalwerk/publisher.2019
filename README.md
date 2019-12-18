@@ -30,18 +30,18 @@ Der Artikel soll zeigen, wie man heute ein dynamisches Design-Systeme für Websi
 ## Publisher 5-19
 Erscheinungsdatum: 14.10.2019
 
+Titelvorschlag: «Mikrotypografie im Web – Leerzeichen»
+
+Der Artikel zeigt, wo im Web überall schlechte Mikrotypografie anzutreffen ist und soll die nötigen Informationen parat stellen um auch im eigenen CMS künftig gute Mikrotypografie ganz ohne Programmierung/CSS anzuwenden. Dazu werden verschiedene Beispiele gezeigt und erklärt, wie das richtige Zeichen am richtigen Ort einen Unterschied machen kann.
+
+
+## Publisher XX
+Erscheinungsdatum: XXX
+
 Titelvorschlag: «Raster und Module im Web»
 
 Lange Zeit waren im Web hauptsächlich nur Spalten-Aufteilungen sinnvoll umzusetzen. Seit einigen Jahren gibt es jedoch erweiterte CSS-Möglichkeiten (Flexbox), wie man eine Gestaltung einfacher und freier realisieren kann. Und nun da CSS-Grids verbreitet sind, gibt es noch einmal eine erweiterte flexibilität, wie ein Raster aufgebaut werden kann. Der Artikel soll Möglichkeiten aufzeigen und motivieren neue Formen von Technik/Gestaltung im Web zu testen um lebendigere Websites zu erhalten.
 
 
-## Publisher 6-19
-Erscheinungsdatum: 9.12.2019
 
-Titelvorschlag: «Mikrotypografie im Web»
-
-Der Artikel zeigt, wo im Web überall schlechte Mikrotypografie anzutreffen ist und soll die nötigen Informationen parat stellen um auch im eigenen CMS künftig gute Mikrotypografie ganz ohne Programmierung/CSS anzuwenden. Dazu werden verschiedene Beispiele gezeigt und erklärt, wie das richtige Zeichen am richtigen Ort einen Unterschied machen kann.
-
-
-
-[![Build Status](https://ci.signalwerk.ch/api/badges/signalwerk/publisher.2019/status.svg)](https://ci.signalwerk.ch/signalwerk/publisher.2019)
+[![Build Status](https://travis-ci.org/signalwerk/publisher.svg?branch=master)](https://travis-ci.org/signalwerk/publisher)

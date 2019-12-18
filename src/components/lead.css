@@ -1,0 +1,6 @@
+lead p {
+  font-weight: 700;
+  color: var(--green-color);
+  line-height: 1.7;
+  margin: 2rem;
+}

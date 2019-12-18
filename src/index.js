@@ -1,7 +1,1 @@
-// import `.scss` files
-import "./styles.scss";
-
-// import
-// import Test from './js/test'
-// let test = new Test("Hello World!")
-// test.log()
+// console.log("here we have js");
