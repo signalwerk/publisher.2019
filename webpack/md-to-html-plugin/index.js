@@ -67,25 +67,28 @@ function generateHTML({
         let data = fs.readFileSync(filePath, { encoding: "utf8" });
         var content = fm(data);
 
-        data = marked(content.body);
+        data = marked(content.body, {
+          highlight: function(code) {
+            return require("highlight.js").highlightAuto(code).value;
+          }
+        });
 
         if (templateContent) {
           data = templateContent.replace("{{markdownContent}}", data);
 
           let rootPath = ".";
           if (currentFolder !== "./") {
-            console.log("currentFolder", currentFolder)
+            console.log("currentFolder", currentFolder);
             rootPath = `.${currentFolder.replace(/[^\/]+/g, "..")}`;
           }
 
           data = data.replace(/\{\{root\}\}/g, rootPath);
 
-          if(rootPath  !== ".") {
-            data = data.replace(/\{\{home\}\}/g, '');
-            data = data.replace(/\{\{\/home\}\}/g, '');
+          if (rootPath !== ".") {
+            data = data.replace(/\{\{home\}\}/g, "");
+            data = data.replace(/\{\{\/home\}\}/g, "");
           } else {
-            data = data.replace(/\{\{home\}\}.*\{\{\/home\}\}/g, '');
-
+            data = data.replace(/\{\{home\}\}.*\{\{\/home\}\}/g, "");
           }
 
           if (content.attributes && content.attributes.title) {
@@ -108,7 +111,7 @@ function generateHTML({
       } else {
         // if not markdown file, just copy
         // nodejs v8.5 use copyFileSync
-        console.log("----copy", filePath, generateFile)
+        console.log("----copy", filePath, generateFile);
         fs.copyFileSync(filePath, generateFile);
         // fs.createReadStream(filePath).pipe(fs.createWriteStream(generateFile));
       }
