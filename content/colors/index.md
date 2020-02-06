@@ -172,9 +172,7 @@ p {
 
 ```css
 @color-profile test {
-  p {
-    src: url('https://xyz.com/profile.icc');
-  }
+  src: url('https://xyz.com/profile.icc');
 }
 p {
   background: color(test 0.38 0.99 0.14);
