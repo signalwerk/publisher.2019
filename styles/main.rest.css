@@ -122,7 +122,7 @@ ul {
   border-radius: 3px;
 }
 pre {
-  padding: 0.2em 0.4em;
+  padding: 0.4em 0.8em;
   background-color: #e6e8ea;
   background-color: var(--gray-color);
 }
@@ -130,6 +130,18 @@ pre,
 code {
   font-family: "WebTypo-Code";
   font-weight: 500;
+}
+code.language-css {
+  color: rgb(0,84,162);
+  /* margin: 1em; */
+
+}
+.hljs-attribute {
+  color: #006984;
+}
+.hljs-keyword,
+.hljs-selector-tag {
+   color: rgb(178,112,0);
 }
 p {
   margin-top: 0.3em;
@@ -513,6 +525,9 @@ h1 {
  .navigation {
    display: none;
  }
+
+  body { -webkit-print-color-adjust: exact; }
+  
   .svg-export,
   .example-big {
     page-break-after: always;

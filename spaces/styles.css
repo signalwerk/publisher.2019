@@ -101,6 +101,9 @@
 }
 
 @media print {
+
+  body { -webkit-print-color-adjust: exact; }
+  
   .svg-export,
   .example-big {
     page-break-after: always;
