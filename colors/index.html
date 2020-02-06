@@ -162,13 +162,11 @@
 
 <div class="svg-export">
 
-<pre><code class="language-css"><span class="hljs-keyword">@color-profile</span> test {
-  <span class="hljs-selector-tag">p</span> {
-    <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'https://xyz.com/profile.icc'</span>);
-  }
+<pre><code class="language-css"><span class="hljs-variable">@color-profile</span> test {
+  <span class="hljs-attribute">src</span>: url(<span class="hljs-string">'https://xyz.com/profile.icc'</span>);
 }
-<span class="hljs-selector-tag">p</span> {
-  <span class="hljs-attribute">background</span>: <span class="hljs-built_in">color</span>(test <span class="hljs-number">0.38</span> <span class="hljs-number">0.99</span> <span class="hljs-number">0.14</span>);
+p {
+  <span class="hljs-attribute">background</span>: color(test <span class="hljs-number">0.38</span> <span class="hljs-number">0.99</span> <span class="hljs-number">0.14</span>);
 }</code></pre>
 </div>
 
