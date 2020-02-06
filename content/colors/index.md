@@ -97,8 +97,8 @@ Dieser Text ist von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativ
 
 <hr />
 
-[CMYK Bilder für Print (pdf) Coated FOGRA39 (ISO 12647-2:2004)](./color_graphics_cmyk.pdf)
-[RGB Bilder für (pdf)](./color_graphics_rgb.pdf)
+* [CMYK Bilder für Print (pdf) Coated FOGRA39 (ISO 12647-2:2004)](./color_graphics_cmyk.pdf)
+* [RGB Bilder für (pdf)](./color_graphics_rgb.pdf)
 
 <hr />
 
