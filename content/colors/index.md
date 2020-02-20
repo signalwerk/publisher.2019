@@ -88,7 +88,7 @@ description: Farben im Web – unterscheiden und interpolieren
 
 
 
-## Publisher 2 · 2020
+## Publisher 1 · 2020
 
 <hr />
 
