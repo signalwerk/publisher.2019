@@ -108,23 +108,22 @@ Dieser Text ist von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativ
 
 <lead>
 
-Farben können sich entscheidend auf die Gestaltung und deren Anmut auswirken. Doch nicht nur für das Design ist die Wahl entscheidend, sondern auch um Barrierefreiheit zu gewähren, muss der Umgang mit Farben überlegt sein. Ob zwischen zwei Farben eine Kontrast benötigt wird oder aber dazwischen interpoliert werden soll kann ganz unterschiedliche Überlegungen nach sich ziehen.
+Farben können sich entscheidend auf die Gestaltung und deren Anmutung auswirken. Doch nicht nur für das Design ist die Wahl entscheidend, sondern auch um Barrierefreiheit zu gewähren, muss der Umgang mit Farben überlegt sein. Ob zwischen zwei Farben ein Kontrast benötigt wird oder aber dazwischen interpoliert werden soll, kann ganz unterschiedliche Überlegungen nach sich ziehen.
 
 </lead>
 
 ## Farbraum im Browser
-Grundsätzlich sind in der [CSS-Farbspezifikation](https://www.w3.org/TR/css-color-3/#SRGB) für das Web alle Farben im Farbraum sRGB spezifiziert. Somit werden in den allermeisten Fällen mittels CSS die Farben auf einer Website definiert, die für heutige Verhältnisse nicht in einem sehr grossen Farbraum liegen. Aktuelle Apple Geräte haben zum Beispiel den Farbraum DCI-P3 welcher ein um etwa 25 % grösseres Gamut (Farbumfang) ermöglichen würde. Somit wird nur ein Teil der möglichen Fähigkeit heutiger Bildschirme ausgenutzt und Farben wirken unnötig verwaschen.  
-Als wäre das nicht schon unglück genug, kommt noch dazu, dass Farben heute als 8-Bit-Werte (0 – 255) gespeichert werden. Somit können feine Farbunterschiede nicht abgebildet werden oder Farbverläufe können stufig wirken.
+Grundsätzlich sind in der [CSS-Farbspezifikation](https://www.w3.org/TR/css-color-3/#SRGB) für das Web alle Farben im Farbraum sRGB definiert. Er bietet jedoch für heutige Verhältnisse einen eher kleinen Farbumfang. Dagegen arbeiten aktuelle Apple-Geräte beispielsweise mit dem Farbraum DCI-P3, welcher ein um etwa 25 % grösseres Gamut (Farbumfang) ermöglichen würde. Somit wird nur ein Teil der potenziellen Fähigkeiten heutiger Bildschirme ausgenutzt und Farben wirken unnötig verwaschen.   
+Als wäre das nicht schon unglücklich genug, kommt noch dazu, dass Farben heute als 8-Bit-Werte (0 – 255) gespeichert werden. Dies hat zur Folge, dass feine Farbunterschiede nicht abgebildet werden oder Farbverläufe stufig wirken können.
 
 ![color-gamut](./img/color-gamut@3x.png)
-*Im direkten Vergleich sieht man, wie die beiden Farbräume sich relativ stark im Gamut unterscheiden. Das sichtbare Spektrum (im Bild als Farbfläche eingezeichnet) ist dabei noch immer wesentlich grösser als die Screens heute dieses abdecken.*
-
+*Im direkten Vergleich sieht man, wie stark sich die beiden Farbräume im Gamut unterscheiden. Das sichtbare Spektrum (im Bild als Farbfläche eingezeichnet) ist dabei noch immer wesentlich grösser als Screens dies heute abdecken.*
 
 ## Bilder
-Sobald Bilder an einen modernen Browser übermittelt werden könnten eingebettete Farbprofile mitgesendet werden, was dann ein bessere Nutzung des Farbraums ermöglichen würde, da viele Browser ICC-Profile unterstüzten. Da dies jedoch zusätzliche Bandbreite benötigt und auch sonst die Server-Infrastruktur oftmals nicht auf profilierte Bildverarbeitung ausgelegt ist, werden nur sehr selten Bilder mit ICC-Profil ausgeliefert. Der Browser muss dann wiederum von sRGB ausgehen, da ihm keine sonstigen Farbinformationen vorliegen.  
+Sobald Bilder an einen modernen Browser übermittelt werden, wäre es theoretisch möglich, eingebettete Farbprofile mitzusenden. Weil viele Browser ICC-Profile unterstützen, könnte so der Farbraum besser genutzt werden. Da dies jedoch zusätzliche Bandbreite benötigt und auch sonst die Server-Infrastruktur oftmals nicht auf profilierte Bildverarbeitung ausgelegt ist, werden nur sehr selten Bilder mit ICC-Profil ausgeliefert. Der Browser muss dann wiederum von sRGB ausgehen, da ihm keine sonstigen Farbinformationen vorliegen.
 
 ## Zwischenwelt
-Was einige Browser heute bereits unterstützen ist in CSS die Definition nach Fähigkeiten des Bildschirms (color-gamut query). Da die Farbdefinition dann aber doch wieder in sRGB angegeben wird, ist diese Unterscheidung eigentlich sinnlos für die Farbdefinition und kann eher zum laden unterschiedlicher Bilder verwendet werden, denn für Farbdefinitionen auf der Seite.
+Einige Browser unterstützen jedoch heute bereits die Definition aufgrund der Bildschirmfähigkeiten (color-gamut query) via CSS. Da die Farbdefinition dann aber doch wieder in sRGB angegeben wird, ist diese Unterscheidung eigentlich sinnlos für die Spezifizierung des Farbumfangs und kann eher zum Laden unterschiedlicher Bilder verwendet werden als für Farbdefinitionen auf der Seite.
 
 
 <div class="svg-export">
@@ -143,13 +142,15 @@ p {
 
 </div>
 
-*Die Farbdefinition im zweiten Block wird als sRGB interpretiert, obwohl die Definition nur auf einem Gerät gelesen wird, was DCI-P3 unterstützt.*
+*Die Farbdefinition im zweiten Block wird als sRGB interpretiert, obwohl sie nur auf einem Gerät gelesen wird, was DCI-P3 unterstützt.*
 
 
 
 ## Farbdefinitionen
-Üblicherweise werden die Farben im CSS als sRGB definiert. Seit geraumer Zeit sind auch HSL-Definitionen möglich, welche die Farbdefinition nach Farbwert (hue), Farbsättigung (saturation) und Helligkeit (lightness) ermöglicht. Aber auch hier wird von sRGB als Profilierung ausgegangen.  
-Erst mit dem neuen Standard [CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/) werden zum ersten mal geräteunabhängige Farben möglich werden. So können künftig zum Beispiel Corporate Colors im CIE LAB Farbraum (ISO 11664-4) angegeben werden. Diese Farbdefinition wird dann möglichst präzise auf den jeweiligen Bildschirm umgesetzt. Dieser Standard ist erst im Entwurf und wird noch heftig Debatiert. Auch gibt es [Bestrebungen](https://github.com/w3c/csswg-drafts/issues/2023#issuecomment-553791757) damit Mischfarben aus mehreren (virtuellen) Farben zu erzeugen. Auch Druckfarben (CMYK) und mittels ICC-Profil charakterisierte Farben sind möglich. Somit würde sich für die Farbkommunikation vieles erleichtern.
+Üblicherweise werden die Farben im CSS als sRGB definiert. Seit geraumer Zeit ist es aber auch möglich, ihnen per HSL weitere Eigenschaften – basierend auf dem Farbwert (hue), der Farbsättigung (saturation) und der Helligkeit (lightness) – beizufügen. Aber dennoch geht man auch hier von sRGB aus.  
+
+Erst mit dem neuen Standard [CSS Color Module Level 4](https://www.w3.org/TR/css-color-4/) sind erstmalig geräteunabhängige Farben realisierbar. So können künftig zum Beispiel Corporate Colors im CIE LAB Farbraum (ISO 11664-4) angegeben werden. Diese Farbdefinition wird dann möglichst präzise auf dem jeweiligen Bildschirm umgesetzt. Allerdings ist der Standard erst im Entwurf und wird noch heftig debattiert. Zudem gibt es [Bestrebungen](https://github.com/w3c/csswg-drafts/issues/2023#issuecomment-553791757), damit Mischfarben aus mehreren (virtuellen) Farben zu erzeugen. Auch Druckfarben (CMYK) und mittels ICC-Profil charakterisierte Farben sind möglich. Somit würde sich die Farbkommunikation erheblich erleichtern.
+
 
 <br />
 
@@ -163,7 +164,7 @@ p {
 
 </div>
 
-*Farbdefinition in CSS Color Module Level 4 werden künfit auch Geräteneutral in CIE LAB definiert werden können.*
+*Farben können im CSS Color Module Level 4 künftig auch geräteneutral in CIE LAB definiert werden.*
 
 
 <br />
@@ -181,18 +182,17 @@ p {
 
 </div>
 
-*Auch können in CSS Color Module Level 4 künftig Farbdefinitionen in einem profilierten Farbraum mit angehängtem ICC-Profil definiert werden.*
+*Zudem können Farben im CSS Color Module Level 4 künftig in einem profilierten Farbraum mit angehängtem ICC-Profil definiert werden.*
 
 
 
 
 ## Farbüberblendung
-Möchte man in einer Gestaltung verschiedene Abstufungen von Farbtönen realisieren, so muss hier überlegt werden, welche Farbinterpolation in welchem Farbsystem verwendet werden. Dies ist zum Beispiel bei Infografiken von entscheidender Bedeutung um eine Werteskala, die mit Farben codiert ist, zu unterscheiden.   
-Leider sind im Moment in Browsern für Verläufe jedoch nur RGB-Übergänge möglich.
+Möchte man in einer Gestaltung verschiedene Abstufungen von Farbtönen realisieren, so muss hier überlegt werden, welche Farbinterpolation in welchem Farbsystem verwendet wird. Dies ist zum Beispiel bei Infografiken von entscheidender Bedeutung, um eine Werteskala, die mit Farben kodiert ist, zu unterscheiden. Leider sind solche Farbverläufe in den Browsern momentan jedoch nur als RGB-Übergänge möglich – wie die drei folgenden Beispiele zeigen.
 
 
 ### RGB-Verläufe
-Browser können RGB-Verläufe problemlos darstellen. Eine mögliche Farbskala daraus mit vier Abstufungen ist zum Vergleich darunter gezeichnet.
+Wie schon gesagt, sind RGB-Verläufe im Browser problemlos darstellbar. Eine mögliche Farbskala daraus mit vier Abstufungen ist zum Vergleich darunter gezeichnet.
 
 <br />
 
@@ -203,7 +203,7 @@ Browser können RGB-Verläufe problemlos darstellen. Eine mögliche Farbskala da
 
 
 ### HSL-Verläufe
-Eigentlich sollte ein HLS-Übergang wie unten abgebildet dargestelt werden. Also wie im HSL-Model üblich, wird das Farbrad durchlaufen – ähnlich einem Regenbogen. Dies wird vom Browser so jedoch nicht unterstützt, obwohl HSL-Farbdefinitionen eigentlich sonst möglich sind.
+Eigentlich sollte ein HLS-Übergang wie unten abgebildet dargestellt werden. Dabei wird wie im HSL-Model üblich das Farbrad durchlaufen – ähnlich einem Regenbogen. Dies wird vom Browser so jedoch nicht unterstützt, obwohl HSL-Farbdefinitionen eigentlich sonst möglich sind.
 
 <br />
 <div class="svg-export">
@@ -212,7 +212,7 @@ Eigentlich sollte ein HLS-Übergang wie unten abgebildet dargestelt werden. Also
 </div>
 
 ### LAB-Verläufe
-Um einn LAB-Verlauf zu erzeugen, muss im Moment mit Programmierung eingegriffen werden. Auch die Abstufung muss dann programmatisch erreichnet werden.
+Ein LAB-Verlauf kann momentan nur per Programmierung erzeugt werden Auch die Abstufung muss dann programmatisch errechnet werden.
 
 <br />
 
@@ -223,38 +223,36 @@ Um einn LAB-Verlauf zu erzeugen, muss im Moment mit Programmierung eingegriffen 
 
 
 ## Farbabstand
-Der Untschied zwischen zwei Farben kann mittels einer mathematischen Formel errechnet werden. Eine verbreitete Weise ist der sogenannte «DeltaE 2000»-Wert. Dieser berücksichtigt die Empfindlichkeit von Menschen auf Helligkeit aber auch auf Farbunterschiede.  
-Dieser Wert ermöglicht – wenn auch nicht perfekt – zu sagen, wie ähnlich sich zwei Farben sind. Je grösser der Wert, desto grösser der Farbunterschied. Dies kann bei der Gestaltung helfen sich nicht nur auf das Auge zu verlassen.
+Der Unterschied zwischen zwei Farben kann mittels einer mathematischen Formel errechnet werden. Eine verbreitete Weise ist der sogenannte «Delta-E-2000»-Wert. Er berücksichtigt die Empfindlichkeit von Menschen auf Helligkeit aber auch auf Farbunterschiede und gibt an, wie ähnlich sich zwei Farben sind. Je höher der Wert, desto grösser der Farbunterschied. Dies kann bei der Gestaltung helfen, sich nicht nur auf das Auge zu verlassen.
 
 <br />
 
-«Delta E»-Wert von ~ 8.9 (ähnlich aber erkennbar anders):
+«Delta-E-2000»-Wert von ~ 8.9 (ähnlich aber erkennbar anders).
 
 <div class="test-patchs deltaEA svg-export"></div>
 
 <br />
 
 
-«Delta E»-Wert von ~ 4.6 (sehr ähnlich):
+«Delta-E-2000»-Wert von ~ 4.6 (sehr ähnlich).
 
 <div class="test-patchs deltaEB svg-export"></div>
 
 <br />
 
-Möchte man nun Farbskalen mit Abständen zwischen den Farben definieren, kann man den «DeltaE 2000»-Wert brauchen um harmonischere Abstände zu erzeugen. So kann zum Beispiel eine schwierige monochromatische Farbskala, mit nur kleinem Unterscheidungsmerkmal, dennoch möglichst ausgewogen verteilt wirken. Der visuelle Farbabstand zwischen den einzelnen Feldern erscheint zumindest regelmässig:
+Möchte man nun Farbskalen mit Abständen zwischen den Farben definieren, kann man den «Delta-E-2000»-Wert nutzen, um harmonischere Abstände zu erzeugen. So kann zum Beispiel eine schwierige monochromatische Farbskala mit nur kleinen Abstufungen dennoch möglichst ausgewogen verteilt wirken. Der visuelle Farbabstand zwischen den einzelnen Feldern erscheint zumindest regelmässig:
+
 
 <br />
 
-«Delta E»-Wert zwischen den Feldern jeweils ~ 17:
+Definiert wurde hier zwischen den Feldern ein «Delta-E-2000»-Wert von jeweils ~ 17.
 
 
 <div class="test-patchs farbdistanceB svg-export"></div>
 
 
 ## Kontrast
-
-
-Zusätzlich zu der Farbwahl sollte auch immer die Barrierefreiheit im Hinterkopf behalten werden. Die [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) sind ein relativ einfaches Regelwerk, welches die Grundlagen für Accessibility (Barrierefreiheit) legen. Die WCAG 2.0 Stufe AA erfordert ein Kontrastverhältnis von mindestens 4.5:1 für normalen Text und 3:1 für grossen Text. Der Nachfolger WCAG 2.1 erfordert ein Kontrastverhältnis von mindestens 3:1 für Grafiken und die Benutzeroberfläche. WCAG Level AAA erfordert ein Kontrastverhältnis von mindestens 7:1 für normalen Text und 4.5:1 für grossen Text. Die Definition von «normal» oder «grossem» Text ist nur ein Beispiel dafür, dass der Standard eher einfach gehalten ist, um einen leichten Einstieg zu ermöglichen.
+Zusätzlich zur Farbwahl sollte auch immer die Barrierefreiheit im Hinterkopf behalten werden. Die [Web Content Accessibility Guidelines (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) sind ein relativ einfaches Regelwerk, das die Grundlagen für Accessibility (Barrierefreiheit) definiert. Je nach Stufe erfordern die Regeln unterschiedliche Kontrastverhältnisse: WCAG 2.0 Stufe AA mindestens 4.5:1 für normalen Text und 3:1 für grossen Text, der Nachfolger WCAG 2.1 mindestens 3:1 für Grafiken und die Benutzeroberfläche und WCAG Level AAA mindestens 7:1 für normalen Text und 4.5:1 für grossen Text. Die Definition von «normal» oder «grossem» Text ist nur ein Beispiel dafür, dass der Standard eher einfach gehalten ist, um einen leichten Einstieg zu ermöglichen.
 
 
 <style type="text/css">
@@ -304,12 +302,16 @@ Zusätzlich zu der Farbwahl sollte auch immer die Barrierefreiheit im Hinterkopf
 <hr />
 
 ## Fazit
-Der Umgang mit Farben im Web ist meist ausreichend und gut. Aber wenn es um Details geht und man sich tiefere Gedanken über die Gestaltung macht, wünscht man oftmals mehr Kontrolle. Diverse Standards und Vorschläge für künftige Standards sind bereits da, somit wird sich dieses Feld in den nächsten Jahren hoffentlich noch weiter entwickeln.
+Der Umgang mit Farben im Web ist meist ausreichend und gut. Aber wenn es um Details geht und man sich tiefere Gedanken über die Gestaltung macht, wünscht man oftmals mehr Kontrolle. Diverse Empfehlungen und Vorschläge für künftige Standards sind bereits da, somit wird sich dieses Feld in den nächsten Jahren hoffentlich noch weiterentwickeln.
 
 <br />
 <br />
 
-*Die Darstellungen wurden in sRGB im Browser erstellt und dann in PDF ausgegeben und dort in CMYK-Druckfarben gewandelt.*
+<!--
+
+*Die Darstellungen wurden in sRGB im Browser erstellt und dann in PDF ausgegeben und dort in CMYK-Druckfarben umgewandelt.*
+
+-->
 
 ### Autor
 Stefan Huber unterrichtet an der [Schule für Gestaltung Zürich](https://sfgz.ch/) im Lehrgang HF Interaction Design und ist als Web-Entwickler tätig.
