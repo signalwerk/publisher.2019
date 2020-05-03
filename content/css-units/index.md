@@ -178,18 +178,19 @@ Dieser Text ist von Stefan Huber unter der Lizenz [CC-BY-SA 4.0](https://creativ
 
 <lead>
 
-Grössenangaben in Illustrations- und Print-Produkten sind meist einfach zu verstehen. Sie bilden ein globales und steifes Koordinatensystem ab. Im Web sind wir aber froh, wenn wir verschiedene Masseinheiten haben, die sich an verschiedenen Gegebenheiten anpassen können.
+Grössenangaben in Illustrations- und Print-Produkten sind meist einfach zu verstehen. Sie bilden ein globales und steifes Koordinatensystem ab. Im Web sind wir aber froh, wenn wir verschiedene Masseinheiten haben, die sich an unterschiedliche Gegebenheiten anpassen können.
 
 </lead>
 
 
 ## Masseinheiten
-Seit dem ausgehenden 18. Jahrhundert gibt es mit dem Meter ein standardisiertes Längenmass, das global eine Kommunikation über Dimensionen vereinfacht. Da wichtige Vertreter der frühen digitalen Grafikprogramme in Amerika beheimatet waren, sind für die Grafische Industrie häufige Basis-Technoligien noch immer auf Zoll-Angaben basierend. So werden bei PDF zum Beispiel die Massangaben intern in Einheiten von <sup>1</sup>&frasl;<sub>72</sub>-Zoll gespeichert. Der so genannte DTP-Punkt.
+## Masseinheiten
+Seit dem ausgehenden 18. Jahrhundert gibt es mit dem Meter ein standardisiertes Längenmass, das die Kommunikation über Dimensionen vereinfacht. Da wichtige Vertreter der frühen digitalen Grafikprogramme in Amerika beheimatet waren, basieren die Basis-Technologien für die Grafische Industrie häufig noch immer auf Zoll-Angaben. So werden die Massangaben bei PDF zum Beispiel intern in Einheiten von <sup>1</sup>&frasl;<sub>72</sub>-Zoll gespeichert. Das ist der sogenannte DTP-Punkt.
 
-Einwenig anders verhält es sich bei Webseiten in HTML. Als im Dezember 1996 der erste Standard für Cascading Style Sheets (CSS) veröffentlicht wurde, waren bereits in diser Spezifikation zwei Typen von Masseinheiten definiert; relative und absolute. Für damalige Verhältnisse fast schon visionär kann man da lesen: «Style sheets that use relative units will more easily scale from one medium to another.». (Style Sheets, die relative Einheiten verwenden, lassen sich leichter von einem Medium zum anderen skalieren.). Damals war diese Aussage noch vor dem Hintergrund zu verstehen, dass Websites nicht selten ausgedruckt wurden und somit ein Medienwechsel vollzogen wird. Heut is die gedruckte Website ein zu vernachlässigender Faktor bei der Wahl einer Masseinheit. Vielmehr ist heute Rücksicht auf verschiedene Ausgabegrössen zu nehmen. Diverse Geräteklassen (Mobile, Tablet, Desktop) haben ganz unterschiedliche Anforderungen und um nicht alle Grössendefinitionen mehrfach zu schreiben, werden viele Dimensionen in relativen Angaben definiert.
+Ein wenig anders verhält es sich bei Webseiten in HTML. Als im Dezember 1996 der erste Standard für Cascading Style Sheets (CSS) veröffentlicht wurde, waren in dieser Spezifikation bereits zwei Typen von Masseinheiten definiert: relative und absolute. Für damalige Verhältnisse fast schon visionär kann man da lesen: «Style sheets that use relative units will more easily scale from one medium to another.» (Formatvorlagen, die relative Einheiten verwenden, lassen sich leichter von einem Medium zum anderen skalieren.) Damals war diese Aussage noch vor dem Hintergrund zu verstehen, dass Websites nicht selten ausgedruckt wurden und somit ein Medienwechsel vollzogen wird. Heute ist die gedruckte Website ein zu vernachlässigender Faktor bei der Wahl einer Masseinheit. Vielmehr ist heute Rücksicht auf verschiedene Ausgabegrössen zu nehmen. Diverse Geräteklassen (Mobile, Tablet, Desktop) haben ganz unterschiedliche Anforderungen, und um nicht alle Grössendefinitionen mehrfach zu schreiben, werden viele Dimensionen durch relative Angaben definiert.
 
 ## Absolute Angaben
-Die wohl am häufigst verwendete absolute Masseinheit im Webdesign ist die Einheit Pixel. In CSS wird diese Masseinheit mit `px` definiert. Wenn also ein farbiges Quadrat mit `200px` Kantenlänge definiert wird, weiss man, dass dieses genau so gross auf dem Bildschirm erscheinen wird, wie ein Bild, welches 200 × 200 px als Inhalt hat. Viel mehr kann man aber bereits nicht mehr sagen. Denn die effektive Grösse am Gerät des Betrachters kann nicht vorhergesagt werden. Je nach Bildschirmgrösse und Auflösungsdichte des Geräts kann dies varrieren. Nicht einmal die Intuitive Annahme, dass ein Pixel im CSS definiert ein Pixel auf dem Bildschirm erzeugt ist richtig. Vielmehr gibt es heute ein «device pixel ratio», welches bei der Anzeige eine entscheidende Rolle spielt.
+Die wohl am häufigsten verwendete absolute Masseinheit im Webdesign ist die Einheit Pixel, abgekürzt `px`. Wenn also ein farbiges Quadrat mit `200px` Kantenlänge festgelegt wird, weiss man, dass es genau so gross auf dem Bildschirm erscheinen wird, wie ein Bild mit einem Inhalt von 200 × 200 px. Viel mehr kann man dazu aber nicht sagen. Denn die effektive Grösse am Gerät des Betrachters kann nicht vorhergesagt werden. Je nach Bildschirmgrösse und Auflösungsdichte des Geräts kann sie variieren. Nicht einmal die intuitive Annahme, dass ein im CSS definiertes Pixel auch ein Pixel auf dem Bildschirm erzeugt, ist richtig. Vielmehr spielt heute die «device pixel ratio» des Geräts eine entscheidende Rolle – ein Verhältnis zwischen Geräte-Pixel und CSS-Pixel der vom Hersteller definiert wird.
 
 
 
@@ -278,12 +279,12 @@ Die wohl am häufigst verwendete absolute Masseinheit im Webdesign ist die Einhe
 </div>
 </div>
 
-*Die selbe Grössendefinition in Pixeln erscheint auf verschiedenen Bildschirmen ganz anders.*
+*Dieselbe Grössendefinition in Pixeln erscheint auf verschiedenen Bildschirmen ganz anders.*
 
 
 
 ## CSS zu Bild
-Doch warum erscheinen die Pixelangaben unterschiedlich gross? Die Ausgabe einer Website wird von einem Renderer gerastert (Teil vom Browser). Der Renderer erzeugt ein «Bild» der auszugebenden Elemente je nach Fähigkeit des Screens. Nachfolgend die Darstellung von einem Bildschirm mit «einem» dunklen Pixel oben links, welches in CSS mit `width: 1px` und `height: 1px` definiert wurde.
+Doch warum erscheinen die Pixel unterschiedlich gross? Die Ausgabe einer Website wird im Browser von einem Renderer gerastert. Je nach Fähigkeit des Screens erzeugt der Renderer ein «Bild» der auszugebenden Elemente. Nachfolgend die Darstellung von einem Bildschirm mit «einem» dunklen Pixel oben links, welches in CSS mit `width: 1px` und `height: 1px` definiert wurde.
 
 <br />
 
@@ -293,13 +294,14 @@ Doch warum erscheinen die Pixelangaben unterschiedlich gross? Die Ausgabe einer 
 
 </div>
 
-1. Rendering für ein «normales» Gerät
-2. Rendering für ein «retina» Gerät mit einem «device pixel ratio» von 2
-3. Rendering für ein «retina» Gerät mit einem «device pixel ratio» von 3
+1. Rendering für ein normales Gerät
+2. Rendering für ein Retina-Gerät mit einem «device pixel ratio» von 2
+3. Rendering für ein Retina-Gerät mit einem «device pixel ratio» von 3
+
 
 ## Bild zu Gerät
 
-Je nach Auflösungsdichte und Spezifikation des Gerätes, werden dann die errechneten Daten auf das Display ausgegeben. Bei LCD-Displays wird jeder Pixel über ein dreigeteiltes Lichtelement mit den gefilterten Farben Rot, Grün, Blau erzeugt. Bei einem modernen OLED-Display bestehen die Pixel aus einzeln angesteuerten farbigen LEDs.
+Je nach Auflösungsdichte und Spezifikation des Geräts werden dann die errechneten Daten auf dem Display ausgegeben. Bei LCD-Displays wird jeder Pixel über ein dreigeteiltes Lichtelement mit den gefilterten Farben Rot, Grün, Blau erzeugt. Bei einem modernen OLED-Display bestehen die Pixel aus einzeln angesteuerten farbigen LEDs.
 
 <br />
 
@@ -310,28 +312,29 @@ Je nach Auflösungsdichte und Spezifikation des Gerätes, werden dann die errech
 </div>
 
 
-1. Darstellung auf «normalem» LCD-Display
-2. Darstellung auf «retina» LCD-Display mit einem «device pixel ratio» von 2
-3. Darstellung auf «retina» OLED-Display mit einem «device pixel ratio» von 3
+1. Darstellung auf normalem LCD-Display
+2. Darstellung auf Retina-LCD-Display mit einem «device pixel ratio» von 2
+3. Darstellung auf Retina-OLED-Display mit einem «device pixel ratio» von 3
 
 
-Natürlich ergib die verdoppelung von Pixeln keine bessere Qualität aber bei Text oder Bildern ist die erweiterte Auflösung hilfreich um Schärfe und Detailreichtum zu erhöhen.
+
+Natürlich ergibt die Verdoppelung von Pixeln keine bessere Qualität, aber bei Text oder Bildern ist die erweiterte Auflösung hilfreich, um die Schärfe und den Detailreichtum zu erhöhen.
 
 <br />
 
 
 ![](./img/oled_an.png)
 
-*Die iOS Systemschrift (San Francisco Pro Text Regular) bei 17 px auf einem iPhone&nbsp;X (Foto)*
+*Die iOS Systemschrift (San Francisco Pro Text Regular) bei 17 px auf einem iPhone&nbsp;X. (Foto)*
 
-Man sieht an den Beispielen, dass die Ausgabe sehr stark Hardwareabhängig geschieht. Welche Dimension nun aber ein Pixel effektiv hat, wurde bei der ganzen Berechnung nicht berücksichtigt und ist von Hersteller zu Hersteller anders und somit auch die Abbildungsgrösse nicht einheitlich.
+Man sieht an den Beispielen, dass die Ausgabe sehr stark von der Hardware abhängt. Welche Dimension aber ein Pixel effektiv hat, wurde bei der ganzen Berechnung nicht berücksichtigt. Dies ist von Hersteller zu Hersteller anders, wodurch auch die Abbildungsgrösse uneinheitlich wird.
 
 ## Weitere absolute Masseinheiten
-Neben der Masseinheit `px` gibt es noch weitere absolute Masseinheiten. So gibt es zum Beispiel `mm` für Millimeter oder `in` für Zoll. Diese werden jedoch selten verwendet, da sie ausser bei der Druckausgabe fast keine Rolle spielen. Und auch für den Druck dienen diese Angaben meist nur zur Definition für Druckränder, da die Typografie oder der Seitenaufbau meistens relativ formatiert wird.
+Neben der Masseinheit `px` gibt es noch weitere absolute Masseinheiten. So gibt es zum Beispiel `mm` für Millimeter oder `in` für Zoll (engl inch). Diese werden jedoch selten verwendet, da sie ausser bei der Druckausgabe fast keine Rolle spielen. Und auch für den Druck dienen diese Angaben meist nur zur Definition der Druckränder, da die Typografie oder der Seitenaufbau meist relativ formatiert wird.
 
 
 ## Relative Masseinheiten
-Eine der wohl am meiten verwendete CSS-Einheit ist die Angabe in `%`. Dies wird vorallem für Breitenangaben verwendet. Die Angabe in Prozent bezieht sich dabei immer auf das umschliessende Objekt. Diese Aufteilung bleibt proportional gleich – unabhängig vom Viewport (Bildschirmausschnitt). Auch lassen sich damit zum Beispiel (mit Tricks) Bilder proportional verkleinern und vergrössern ohne das Bildverhältnis zu verändern.
+Eine der wohl am meisten verwendete CSS-Einheit ist das Prozent, `%`. Sie wird vor allem für Breitenangaben genutzt. Die Angabe in Prozent bezieht sich dabei immer auf das umschliessende Objekt. Diese Aufteilung bleibt proportional gleich – unabhängig vom Viewport (Bildschirmausschnitt). Auch lassen sich damit zum Beispiel (mit Tricks) Bilder proportional verkleinern und vergrössern, ohne das Bildverhältnis zu verändern.
 
 
 
@@ -427,7 +430,7 @@ Eine der wohl am meiten verwendete CSS-Einheit ist die Angabe in `%`. Dies wird 
 
 
 ## EM – relativ zu was schon wieder?
-Bei der Grössenangabe `em` handelt es sich um eine relative Angabe einer Dimension zu der Schriftgrösse des umschliessenden Elements. In typografischen Systemen können so Elemente passend zu der momentanen Schrifgrösse dimensioniert oder verschoben werden. Diese Einheit – wie alle anderen hier besprochenen Einheiten – kann nicht nur auf Schrift angewandt werden, sondern auch auf beliebig andere Objektdimensionen (Grösse, Position, …). Da sich die Angabe immer auf das umschliessende Element bezieht, ist die Verschachtelung der Komponenten entscheidend.
+Mit der Einheit `em` wird die Grösse in Relation zur aktuellen Schriftgrösse festgelegt. Dabei kann diese Einheit – wie ebenfalls alle anderen hier besprochenen – nicht nur auf Schrift angewandt werden, sondern auch auf beliebige andere Dimensionen (Grösse, Position, …). Dennoch ist die Bezugsgrösse, worauf sich `em` bezieht die Schriftgrösse. In Gestaltungen ist dies äusserst nützlich, da somit die Angabe in einer Abhängigket zur momentanen Schrftgrösse beschrieben wird und eine skallierung der Schrift auch eine skallierung anderer Elemente ergibt. Da sich die Angabe immer auf das umschliessende Element bezieht, ist die Verschachtelung der Komponenten entscheidend.
 
 
 <style>
@@ -547,13 +550,13 @@ font-weight: 700;
 </div>
 </div>
 
-*Bei diesem Beispiel wurde die Schriftgrösse der Seite jeweils auf den Viewport angepasst. Die einzelnen Kinds-Elemente tragen alle eine Schriftgrösse von `2em`.*
+*Bei diesem Beispiel wurde die Schriftgrösse der Seite jeweils an den Viewport angepasst. Die untergeordneten Elemente haben alle eine Schriftgrösse von `2em`.*
 
 
 
 
 ## REM – relativ zum Obersten
-Bei der Grössenangabe `rem` wird die Grösse immer relativ zur Schrifgrösse des obersten Elements im Dokument (HTML-Tag) angegeben. So können Titelhierarchien bequem aufgebaut werden ohne dabei auf die Verschachtelung zu achten. Für die Anpassung auf andere Viewports muss dann nur noch die Schriftgrösse vom HTML-Tag entsprechend angepasst werden.
+Bei der Einheit `rem` wird die Grösse immer relativ zur Schriftgrösse des obersten Elements im Dokument (HTML-Tag) angegeben. So können Titelhierarchien bequem aufgebaut werden, ohne dabei auf die Verschachtelung zu achten. Bei der Nutzung anderer Viewports muss dann nur noch die Schriftgrösse entsprechend des HTML-Tag angepasst werden. Sowohl `em` wie auch `rem` sind aus der Perspektive von klassischen Masssystemen schwer vorstellbar. Dort ist meist eine möglichst einheitliche Bezugsgrösse gewünscht. Ein Konzept, bei dem eine Dimension sich an einer momentanen Schriftgrösse orientiert scheint fast schon absurd, ist aber – wenn man sich daran gewöhnt hat – sehr hilfreich.
 
 
 <style>
@@ -616,21 +619,19 @@ Bei der Grössenangabe `rem` wird die Grösse immer relativ zur Schrifgrösse de
 </div>
 </div>
 
-*Im gegensatz zur definition mit `em` kann nun ohne Rücksicht auf Verschachtelung gearbeitet werden.*
+*Im Gegensatz zur Definition mit `em` kann nun ohne Rücksicht auf Verschachtelung gearbeitet werden.*
 
 
 
 
 
 ## Viewportabhängige Einheiten
-Weitere relative Einheiten, die ab und an noch gebraucht werden, sind die viewportabhängigen Einheiten. Sie beziehen sich also darauf wie gross der Viewport, in dem die Inhalte gerade betrachtet werden, ist. Hier eine Übersicht von viewportabhängige Einheiten:
+Weitere relative Einheiten, die ab und an noch gebraucht werden, sind die viewportabhängigen Einheiten. Sie beziehen sich also auf die Grösse des Viewports, in dem die Inhalte betrachtet werden. Hier eine Übersicht von viewportabhängige Einheiten:
 
-
-* `vh` – 1% der  Viewporthöhe
-* `vw` – 1% der Viewportbreite
-* `vmin` – 1% der schmaleren Viewportdimension
-* `vmax` – 1% der grösseren Viewportdimension
-
+* `vh` – 1 % der Viewporthöhe
+* `vw` – 1 % der Viewportbreite
+* `vmin` – 1 % der schmaleren Viewportdimension (bei Hochformat also die Breite und bei Breitformat die Höhe)
+* `vmax` – 1 % der grösseren Viewportdimension (bei Hochformat also die Höhe und bei Breitformat die Breite)
 
 
 
@@ -656,7 +657,7 @@ Weitere relative Einheiten, die ab und an noch gebraucht werden, sind die viewpo
 }
 
 .example-vh .dbox {
-  width: 100%;
+  width: 90%;
  height: 50%;
 }
 
@@ -690,7 +691,7 @@ Weitere relative Einheiten, die ab und an noch gebraucht werden, sind die viewpo
             <div class="browser-content">
               <div class="example-vh">
                 <div class="dbox">
-                  <span class="leg">100 vw × 200 vh</span>
+                  <span class="leg">90 vw × 50 vh</span>
                 </div>
               </div>
             </div>
@@ -710,7 +711,7 @@ Weitere relative Einheiten, die ab und an noch gebraucht werden, sind die viewpo
             <div class="browser-content">
               <div class="example-vh">
                 <div class="dbox">
-                  <span class="leg">100 vw × 200 vh</span>
+                  <span class="leg">90 vw × 50 vh</span>
                 </div>
               </div>
             </div>
@@ -721,17 +722,17 @@ Weitere relative Einheiten, die ab und an noch gebraucht werden, sind die viewpo
 </div>
 </div>
 
-*Die selbe Grössendefinition die sich auf den Vieport bezieht erscheint auf verschiedenen Bildschirmen jeweils angepasst.*
+*Dieselbe auf den Viewport bezogene Grössendefinition erscheint auf verschiedenen Bildschirmen jeweils angepasst.*
 
 
 
 ## Mischung
-Nicht eine eigentliche Masseinheit von CSS, aber dennoch ideal zur Massangabe ist die so genannte `calc()`-Funktion. Mit ihr lassen sich beliebige CSS-Einheiten mischen. Möchte man zum Beispiel ein Objekt auf die Viewportbreite skallieren, aber links und rechts noch einen Rand von je 10 px lassen, so könnte man die Breite wie folgt angeben: `calc(100vw - 20px)`
+Nicht eigentliche eine Masseinheit von CSS, aber dennoch ideal zur Massangabe, ist die so genannte `calc()`-Funktion. Mit ihr lassen sich beliebige CSS-Einheiten mischen. Möchte man zum Beispiel ein Objekt auf die Viewportbreite skallieren, aber links und rechts noch einen Rand von je 10 px lassen, so könnte man die Breite wie folgt angeben: `calc(100vw - 20px)`.
 
 
 ## Fazit
-Nebst den hier gezeigten Massangabe gibt es noch diverse mehr. Jedoch werden diese nur sehr selten gebraucht. Oder wollten Sie schon mal eine Grössenangabe abhängig von der Breite der Ziffer Null tätigen? In CSS hätten Sie die Chance dazu (Einheit `ch`)…  
-Das mentale Modell, wie man eine Gestaltung proportioniert, scheinen für eine Website auf den ersten Blick eher Komplex. Jedoch erkennt man in der Anwendung schnell, dass ein bewusster Einsatz der «richtigen» Masseinheit am richtigen Ort einem viel Arbeit bei der Viewport-Adaption abnimmt. Einer tolle Gestaltung von Mobile bis Desktop steht nichts mehr im Weg.
+Nebst den hier gezeigten Massangaben gibt es noch diverse andere. Jedoch werden diese nur sehr selten gebraucht. Oder wollten Sie schon mal eine Grössenangabe abhängig von der Breite der Ziffer Null tätigen? In CSS hätten Sie mit der Einheit `ch` die Chance dazu…
+Das mentale Modell, wie man eine Gestaltung proportioniert, erscheint für eine Website auf den ersten Blick eher komplex. Jedoch erkennt man in der Anwendung schnell, dass man sich viel Arbeit bei der Viewport-Adaption durch den bewussten Einsatz der richtigen Masseinheit am richtigen Ort ersparen kann. Einer tollen Gestaltung von Mobile bis Desktop steht nichts mehr im Weg.
 
 
 
