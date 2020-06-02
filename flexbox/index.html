@@ -24,7 +24,14 @@
 @import '../css-units/browser.css';
 @import './flex.css';
 @import './grid.css';
+
+@media print {
+  .content {
+    max-width: 28rem;
+  }
+}
 </style>
+
 
 
 <h2 id="publisher-3-·-2020">Publisher 3 · 2020</h2>
@@ -158,10 +165,17 @@
   height: 100%;
 }
 .example-axis--rotate {
-  transform: rotate(90deg) translateY(-100%);
+  transform: rotate(90deg) translateY(-150%);
   transform-origin: top left;
   width: 22.4rem;
 }
+
+@media print {
+  .example-axis--rotate {
+    width: 16.4rem;
+  }
+}
+
 .example-flex--gray div[class^='col-']{
   background-color: #eee;
 
@@ -185,7 +199,7 @@
     </div>
     <div class="example-axis example-axis--rotate">
       <div class="arrow arrow--right">
-        &nbsp;&nbsp;&nbsp;Kreuzachse
+        &nbsp;&nbsp;Kreuzachse
         <span class="shaft"></span>
       </div>
     </div>
