@@ -1,0 +1,862 @@
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <title>Flexbox – ausrichten von Elementen im Web</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Flexbox – ausrichten von Elementen im Web" />
+    <link
+      rel="stylesheet"
+      href="./../styles/main.critical.css"
+      media="all"
+    />
+    <link
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+      href="./../styles/main.rest.css"
+      media="all"
+    />
+    <script src="./../index.js"></script>
+  </head>
+  <body>
+     <div class="navigation"><div class="navigation__content"><a href="./..">Home</a></div></div> 
+    <article class="content"><style>
+@import '../css-units/browser.css';
+@import './flex.css';
+@import './grid.css';
+</style>
+
+
+<h2 id="publisher-3-·-2020">Publisher 3 · 2020</h2>
+<p>Erscheinungsdatum · 2020</p>
+<hr />
+
+<h2 id="lizenzen">Lizenzen</h2>
+<p>Dieser Text ist von Stefan Huber unter der Lizenz <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a> veröffentlicht. <a href="https://publisher.ch/">Publisher</a> erhält das Recht die Inhalte ohne Copyleft (Share Alike) zu publizieren.</p>
+<hr />
+
+<p><a href="./flexbox_graphics_print.pdf">Bilder für Print (pdf)</a></p>
+<hr />
+
+
+<h1 id="flexbox--ausrichten-von-elementen-im-web">Flexbox – ausrichten von Elementen im Web</h1>
+<lead>
+
+<p>Das sehr flexible CSS-Grid ist der richtige Kandidat, wenn es darum geht zweidimensionale Layouts möglichs lebendig zu erstellen. Doch wenn man einzelne Elemente verteilen möchte, dann ist Flexbox genau das richtige.</p>
+</lead>
+
+<h2 id="rückschau">Rückschau</h2>
+<p>Die erste Veröffentlichung von <a href="https://www.w3.org/TR/REC-CSS1-961217">Cascading Style Sheets (CSS)</a> im Jahr 1996 hatte bereits eine sehr gute Grundlage geschaffen um Texte zu formatieren und die Struktur vom Inhalt auch visuell zu unterscheiden. Wenn man ein reiches Layout mit komplexen Strukturen erreichen wollte, so war dies jedoch meist schwieriger zu erzielen. Insbesondere die seit 2007 (iPhone Einführung) stetig wachsende Bedeutung von Mobilgeräten weckte das Bedürfnis auch flexible Layouts für verschiedene Screengrössen adaptieren zu können. Erst seit dem Herbst 2018 gibt es nun eine Spezifikation über das so genannte <a href="https://www.w3.org/TR/css-flexbox/">Flexible Box Layout Module</a> (kurz Flexbox). Obwohl dieser Standard streng gesehen noch nicht abgeschlossen ist, haben alle modernen Browser schon länger die Unterstützung dafür integriert und im Gegensatz zum bereits früher (2017) eingeführten <a href="https://www.w3.org/TR/css-grid-1/">Grid Layout Module</a> (kurz CSS-Grids) haben die Browser Flexbox schneller integriert. Es steht also nichts im Weg flexbox zu verwenden.</p>
+<h2 id="anwendungsbereich">Anwendungsbereich</h2>
+<p>Auch wenn Flexbox den Anschein macht, dass man zweidimensionale Layouts machen kann, so muss man streng genommen eher von einer Methode zur Positionierung von Elementen in horizontalen oder vertikalen Schichtungen sprechen. Also man kann zwar horizontal oder vertikal gewisse Ausrichtungen steuern, aber für wirklich freie zweidimensionale Aufteilungen muss CSS-Grids verwendet werden. Dennoch bietet Flexbox viele mächtige Funktionen zur Positionierung von Elementen.</p>
+<br />
+
+
+
+<h3 id="flexbox">Flexbox</h3>
+<div class="svg-export">
+<div class="example-content">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height">
+      <div class="col-2of3 col-mrgb">
+        <span class="leg">Spalte 1 + 2</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">Spalte 3</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">Spalte 1</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">Spalte 2</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">Spalte 3</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">Spalte 1</span>
+      </div>
+      <div class="col-2of3">
+        <span class="leg">Spalte 2 + 3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<p><em>Eine typische Anwendung von Flexbox ist die Aufteilung eines Layouts in Spalten</em></p>
+<br />
+<br />
+
+
+
+<h3 id="css-grids">CSS Grids</h3>
+<div class="svg-export">
+<div class="example-content">
+  <div class="example-content__inner">
+    <div class="example-grid">
+      <div class="grd-w2">
+        <span class="leg">Spalte 1 + 2</span>
+      </div>
+      <div class="grd-h2 grd-special">
+        <span class="leg">Spalte 3</span>
+      </div>
+      <div class="">
+        <span class="leg">Spalte 1</span>
+      </div>
+      <div class="">
+        <span class="leg">Spalte 2</span>
+      </div>
+      <div class="">
+        <span class="leg">Spalte 1</span>
+      </div>
+      <div class="grd-w2">
+        <span class="leg">Spalte 2 + 3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<p><em>Möchte man aber anstatt Spalten einen Gestaltungsraster, der auch über mehrere «Zeilen» hinweg funktioniert, so arbeitet man besser gleich mit CSS-Grids.</em></p>
+<h2 id="hauptachse--kreuzachse">Hauptachse &amp; Kreuzachse</h2>
+<p>Grundsätzlich benötigt man im HTML ein Container-Element, welches den Display-Mode <code>flex</code> erhält. Die zu verteilenden Elemente sind dann in diesem Container-Element. Innerhalb dieses Elements kann mann dann die Hauptachse und die Kreuzachse beeinflussen. Die Hauptachse ordnet standardmässig von links nach rechts, die Kreuzachse von oben nach unten.</p>
+<h3 id="html">HTML</h3>
+<div class="svg-export">
+
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"container"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span>&gt;</span>1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span>&gt;</span>2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"item"</span>&gt;</span>3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div>
+
+
+<h3 id="css">CSS</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+}</code></pre>
+</div>
+
+
+<p>Die Elemente die dann im Container eingefügt werden orientieren sich nun an der Hauptachse.</p>
+<br />
+
+<style>
+@import './arrow.css';
+
+.example-axis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.example-axis--rotate {
+  transform: rotate(90deg) translateY(-100%);
+  transform-origin: top left;
+  width: 22.4rem;
+}
+.example-flex--gray div[class^='col-']{
+  background-color: #eee;
+
+}
+</style>
+
+
+<div class="svg-export">
+<div class="example-content">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height example-flex--gray">
+      <div class="col-3of3">
+        <span class="leg"></span>
+      </div>
+    </div>
+    <div class="example-axis">
+      <div class="arrow arrow--right">
+        &nbsp;&nbsp;Hauptachse
+        <span class="shaft"></span>
+      </div>
+    </div>
+    <div class="example-axis example-axis--rotate">
+      <div class="arrow arrow--right">
+        &nbsp;&nbsp;&nbsp;Kreuzachse
+        <span class="shaft"></span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<h2 id="container--flex-direction">Container – flex-direction</h2>
+<p>Über die <code>flex-direction</code> können wir die Hauptachse in horizontalen Zeilen oder vertikalen Spalten orientieren.
+Neben <code>row</code> und <code>column</code> gibt es jeweils noch <code>row-reverse</code> und <code>column-reverse</code>, bei denen die Reihenfolge umgekehrt wird.</p>
+<h3 id="row-standard">Row (Standard)</h3>
+ <div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: row;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<br />
+
+<h3 id="column">Column</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-direction</span>: column;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-col">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<br />
+
+<h2 id="container--flex-wrap">Container – flex-wrap</h2>
+<p>Standardmässig werden alle Elemente versuchen, auf eine Linie zu passen. Mit <code>flex-wrap</code> kann gesteuert werden, wie dieser «Fluss» der Elemente innerhalb des Containers sich nun verhalten soll.</p>
+<h3 id="nowrap-standard">nowrap (Standard)</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-wrap</span>: nowrap;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-margin" style="flex-wrap: nowrap;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">4</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<h3 id="wrap">wrap</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-wrap</span>: wrap;
+}</code></pre>
+<div class="example-content example-content--two">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height" style="flex-wrap: wrap;">
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">3</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">4</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<h3 id="wrap-reverse">wrap-reverse</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">flex-wrap</span>: wrap-reverse;
+}</code></pre>
+<div class="example-content example-content--two">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height" style="flex-wrap: wrap-reverse;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">4</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+<h2 id="container--justify-content">Container – justify-content</h2>
+<p>Eine der wichtigsten eigenschaften vom Container ist das Attribut <code>justify-content</code>. Es hilft dabei zu bestimmen, wie die Elemente im Container ausgerichtet werden sollen. Abgebildet sind die meist verwendeten Werte. Es gibt zusätzlich noch Möglichkeiten, sich an der Schreibrichtung zu orientieren. Dies ist vorallem bei internationalen Websites mit verschiedenen Schreibrichtungen (links nach rechts &amp; rechts nach links) nützlich.</p>
+<h3 id="flex-start-standard">flex-start (Standard)</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: flex-start;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="justify-content: flex-start;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<h3 id="flex-end">flex-end</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: flex-end;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="justify-content: flex-end;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+<h3 id="center">center</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="justify-content: center;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+<h3 id="space-between">space-between</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-between;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="justify-content: space-between;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<h3 id="space-around">space-around</h3>
+<div class="svg-export">
+
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-around;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="justify-content: space-around;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<h3 id="space-evenly">space-evenly</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: space-evenly;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="justify-content: space-evenly;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+<h2 id="container--align-items">Container – align-items</h2>
+<p>Mit dem Attribut <code>align-items</code> wird gesteuert, wie die Elemente innerhalb des Containers auf der Kreuzachse ausgerichtet werden. Neben den abgebildeten Werten gibt es noch weitere. Insbesondere die Möglchkeit die Elementen auch an der Schriftlinie (<code>baseline</code>) auszurichten wird ab und an verwendet.</p>
+<h3 id="stretch-standard">stretch (Standard)</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: stretch;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="align-items: stretch;">
+      <div class="col-1of3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<h3 id="flex-start">flex-start</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: flex-start;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="align-items: flex-start;">
+      <div class="col-1of3 col-h3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3 col-h1">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3 col-h2">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<h3 id="flex-end-1">flex-end</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: flex-end;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="align-items: flex-end;">
+      <div class="col-1of3 col-h3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3 col-h1">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3 col-h2">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<h3 id="center-1">center</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-item flex-margin" style="align-items: center;">
+      <div class="col-1of3 col-h3">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3 col-h1">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3 col-h2">
+        <span class="leg">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<h2 id="container--align-content">Container – align-content</h2>
+<p>Genau wie bei <code>justify-content</code> wird mit <code>align-content</code> die Verteilung der Elemente eingerichtet. <code>justify-content</code> kontrolliert die Hauptachse und <code>align-content</code> die Kreuzachse. Es wurden nur exemplarisch einige Werte abgebildet.</p>
+<h3 id="stretch-standard-1">stretch (Standard)</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-content</span>: stretch;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height" style="flex-wrap: wrap; align-content: stretch;">
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3 col-mrgb">
+        <span class="leg">3</span>
+      </div>
+      <div class="col-1of3">
+        <span class="leg">4</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+<h3 id="flex-start-1">flex-start</h3>
+<div class="svg-export">
+
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-content</span>: flex-start;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height" style="flex-wrap: wrap; align-content: flex-start;">
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">3</span>
+      </div>
+      <div class="col-1of3 col-h1">
+        <span class="leg">4</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+<h3 id="flex-end-2">flex-end</h3>
+<div class="svg-export">
+
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-content</span>: flex-end;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height" style="flex-wrap: wrap; align-content: flex-end;">
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">3</span>
+      </div>
+      <div class="col-1of3 col-h1">
+        <span class="leg">4</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<h3 id="space-evenly-1">space-evenly</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.container</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-content</span>: space-evenly;
+}</code></pre>
+<div class="example-content example-content--tree">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height" style="flex-wrap: wrap; align-content: space-evenly;">
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3 col-mrgb col-h1">
+        <span class="leg">3</span>
+      </div>
+      <div class="col-1of3 col-h1">
+        <span class="leg">4</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<h2 id="elemente--flex-basis-flex-grow--flex-shrink">Elemente – flex-basis, flex-grow &amp; flex-shrink</h2>
+<p>Wenn kein <code>flex-basis</code> angegeben wird, so orientiert sich die Breite der Elemente auf der Hauptachse an dem <code>width</code>-Wert des Elements. Wenn ein <code>flex-basis</code>-Wert für die Elemente angegeben wird, so wird der <code>width</code>-Wert nicht berücksichtigt und stattdessen kann man mit <code>flex-basis</code> ein Verhältnis zwischen den einzelnen Elementen angeben. Somit ist der Container flexibel und der Inhalt passt sich an. <code>flex-grow</code> und <code>flex-shrink</code> geben an, wie unbenutzter Raum verwendet werden soll.</p>
+<h3 id="flex-basis">flex-basis</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.item1</span>, <span class="hljs-selector-class">.item2</span>, <span class="hljs-selector-class">.item3</span> {
+  <span class="hljs-attribute">flex-basis</span>: <span class="hljs-number">20%</span>;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-margin" style="">
+      <div class="col-1of3" style="flex-basis: 20%;">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3" style="flex-basis: 20%;">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3" style="flex-basis: 20%;">
+        <span class="leg">1</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<h3 id="flex-grow">flex-grow</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.item1</span>, <span class="hljs-selector-class">.item2</span>, <span class="hljs-selector-class">.item3</span> {
+  <span class="hljs-attribute">flex-basis</span>: <span class="hljs-number">20%</span>;
+}
+<span class="hljs-selector-class">.item1</span>, <span class="hljs-selector-class">.item3</span> {
+  <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">1</span>;
+}
+<span class="hljs-selector-class">.item2</span> {
+  <span class="hljs-attribute">flex-grow</span>: <span class="hljs-number">2</span>;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-margin" style="">
+      <div class="col-1of3" style="flex-basis: 20%; flex-grow: 1;">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3" style="flex-basis: 20%; flex-grow: 2;">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3" style="flex-basis: 20%; flex-grow: 1;">
+        <span class="leg">1</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<h3 id="flex-shrink">flex-shrink</h3>
+<div class="svg-export">
+
+<pre><code class="language-css"><span class="hljs-selector-class">.item1</span>, <span class="hljs-selector-class">.item2</span>, <span class="hljs-selector-class">.item3</span> {
+  <span class="hljs-attribute">flex-basis</span>: <span class="hljs-number">40%</span>;
+}
+<span class="hljs-selector-class">.item1</span>, <span class="hljs-selector-class">.item3</span> {
+  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">1</span>;
+}
+<span class="hljs-selector-class">.item2</span> {
+  <span class="hljs-attribute">flex-shrink</span>: <span class="hljs-number">2</span>;
+}</code></pre>
+<div class="example-content example-content--one">
+  <div class="example-content__inner">
+    <div class="example-flex example-flex--full-height flex-margin" style="flex-wrap: nowrap;">
+      <div class="col-1of3" style="flex-basis: 40%; flex-shrink: 1;">
+        <span class="leg">1</span>
+      </div>
+      <div class="col-1of3" style="flex-basis: 40%; flex-shrink: 2;">
+        <span class="leg">2</span>
+      </div>
+      <div class="col-1of3" style="flex-basis: 40%; flex-shrink: 1;">
+        <span class="leg">1</span>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<h2 id="fazit">Fazit</h2>
+<p>Es gibt noch diverse mehr Optionen, wie man mit Flexbox kontrollieren kann. So lassen sich zum Beispiel auch Elemente neu im Fluss umsortieren (<code>order</code>) oder einzelene Elemente noch separat ausserhalb des Flusses der Kreuzachse (<code>align-self</code>) orientieren. Doch mit ein paar wenigen Attributen kann man meist schon seine gewünschte Layout-Anordnung erreichen.
+Flexbox ist durch die Unglaubliche Flexibilität einwenig schwer sich rein zu denken, aber mit der Zeit schätzt man die vielfältigen Anordnungen, die einem ein lebendiges Layout ermöglichen.</p>
+<hr />
+
+<h3 id="autor">Autor</h3>
+<p>Stefan Huber unterrichtet an der <a href="https://sfgz.ch/">Schule für Gestaltung Zürich</a> im Lehrgang HF Interaction Design und ist als Web-Entwickler tätig.</p>
+<hr />
+</article>
+  </body>
+</html>

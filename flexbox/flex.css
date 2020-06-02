@@ -1,0 +1,119 @@
+:root {
+  --example-height: 24rem;
+  --example-line: 2.5rem;
+  --example-padding: 0.6rem;
+  --example-separator: 0.3rem;
+  --example-stroke: 0.2rem;
+}
+
+.example-content {
+  width: 100%;
+  height: var(--example-height);
+  padding: var(--example-padding);
+  border-style: solid;
+  border-width: var(--example-stroke);
+  border-color: black;
+  position: relative;
+  background-color: white;
+}
+
+.example-content--one {
+  height: calc(
+    var(--example-line) * 1 + var(--example-padding) * 2 + var(--example-stroke) *
+      2
+  );
+}
+
+.example-content--two {
+  height: calc(
+    var(--example-line) * 2 + var(--example-separator) * 1 +
+      var(--example-padding) * 2 + var(--example-stroke) * 2
+  );
+}
+
+.col-h1 {
+  height: calc(var(--example-line) * 1);
+}
+
+.col-h2 {
+  height: calc(var(--example-line) * 2 + var(--example-separator) * 1);
+}
+
+.col-h3 {
+  height: calc(var(--example-line) * 3 + var(--example-separator) * 2);
+}
+
+.example-content--tree {
+  height: calc(
+    var(--example-line) * 3 + var(--example-separator) * 2 +
+      var(--example-padding) * 2 + var(--example-stroke) * 2
+  );
+}
+
+.example-content__inner {
+  position: absolute;
+  width: calc(100% - var(--example-padding) * 2);
+  height: calc(100% - var(--example-padding) * 2);
+  background-color: var(--gray-color);
+}
+
+.example-flex {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+}
+
+.example-flex--full-height {
+  height: 100%;
+}
+
+.example-flex .col-2of3 {
+  width: calc(
+    (100% - var(--example-separator) * 2) / 3 * 2 + var(--example-separator)
+  );
+}
+.example-flex .col-1of3 {
+  width: calc((100% - var(--example-separator) * 2) / 3);
+}
+
+.example-flex .col-3of3 {
+  width: 100%;
+}
+
+.example-flex div[class^="col-"] {
+  background-color: #0054a2;
+  font-size: 1.5em;
+  line-height: 1;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.example-flex .col-mrgb {
+  margin-bottom: var(--example-separator);
+}
+
+.flex-col {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.flex-col div[class^="col-"] {
+  width: 100%;
+  height: calc((100% - var(--example-separator) * 2) / 3);
+}
+
+.flex-item div[class^="col-"] {
+  width: auto;
+  padding: 0 0.5em;
+}
+
+.flex-margin div[class^="col-"] + div[class^="col-"] {
+  margin-left: var(--example-separator);
+}

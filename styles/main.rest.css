@@ -7,7 +7,8 @@
   --green-color: #006984;
   --blue-color: #0054a2;
   --gray-color: #e6e8ea;
-  --gray-red: #f00;
+  --red-color: #f00;
+  --brown-color: rgb(178, 112, 0);
 }
 ::-moz-selection {
   background: #0054a2;
@@ -131,18 +132,50 @@ code {
   font-family: "WebTypo-Code";
   font-weight: 500;
 }
+/* HTML Color */
+code.language-html {
+  color: black;
+}
+.language-html .hljs-tag {
+    color: #0054a2;
+    color: var(--blue-color);
+  }
+.language-html .hljs-name,
+  .language-html .hljs-attr {
+    color: rgb(178, 112, 0);
+    color: var(--brown-color);
+  }
+.language-html .hljs-string {
+    color: #006984;
+    color: var(--green-color);
+  }
+/* CSS Color */
 code.language-css {
-  color: rgb(0,84,162);
-  /* margin: 1em; */
+  color: #0054a2;
+  color: var(--blue-color);
+}
+.language-css {
+  /* .hljs-attribute {
+    color: #006984;
+  }
 
+  .hljs-keyword,
+  .hljs-selector-tag {
+    color: rgb(178, 112, 0);
+  } */
 }
-.hljs-attribute {
-  color: #006984;
-}
-.hljs-keyword,
-.hljs-selector-tag {
-   color: rgb(178,112,0);
-}
+.language-css .hljs-selector-class {
+    color: #006984;
+    color: var(--green-color);
+  }
+.language-css .hljs-attribute {
+    color: rgb(178, 112, 0);
+    color: var(--brown-color);
+  }
+.language-css .hljs-comment {
+    color: #888;
+
+  }
 p {
   margin-top: 0.3em;
   margin-bottom: 0.1em;

@@ -21,158 +21,7 @@
   <body>
      <div class="navigation"><div class="navigation__content"><a href="./..">Home</a></div></div> 
     <article class="content"><style>
-.desktop,
-.mobile {
-  border-style: solid;
-  border-width: 1em;
-  border-color: black;  
-  position: relative;
-  background-color: white;
-}
-.mobile {
-  border-radius: 5em;
-
-}
-
-.screen {
-  margin: 1em;
-  background-color: #fff;
-  position: relative;
-}
-
-.mobile .screen {
-  border-radius: 3em;
-}
-
-.screen:before {
-  content: "";
-  display: block;
-  height: 0;
-  padding-bottom: 200%;
-  width: 100%;
-  height: 0;
-}
-
-.mobile .screen:before {
-  padding-bottom: 200%;
-}
-
-.desktop .screen:before {
-  padding-bottom: 66.3%;
-}
-
-.nudge {
-  position: absolute;
-  top: 0;
-  left: 19%;
-  width: 62%;
-  margin: 0 auto;
-  border-style: solid;
-  border-width: 0.5em;
-  border-color: black;
-  border-top-width: 0;  
-  border-radius: 0 0 1.2em 1.2em;
-  z-index: 5;
-}
-.nudge:before {
-  content: "";
-  display: block;
-  height: 0;
-  padding-bottom: 12%;
-
-}
-
-.screen-inner {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
-.browser {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  flex-direction: column;
-}
-
-.browser-content {
-  flex-grow: 1;
-  overflow: hidden;
-
-}
-
-.mobile .browser-content {
-  border-radius: 0 0 3em 3em;
-
-}
-
-.browser-header {
-  border-bottom-style: solid;
-  border-bottom-width: 0.5em;
-  border-bottom-color: black;
-  background-color: gray;
-  margin: 0 -2em;
-  margin-top: 6em;
-  margin-bottom: 0.25em;
-}
-
-.desktop .browser-header {
-  margin-top: 3em;
-}
-
-.browser-header:before {
-  position: absolute;
-  content: "";
-  display: block;
-  height: 1em;
-  top: 3.9em;
-  width: calc(100% - 2em);
-  background-color: black;
-  left: 0;
-}
-
-.browser-header:after {
-  position: absolute;
-  content: "";
-  display: block;
-  height: 1em;
-  top: 3.9em;
-  width: 1em;
-  background-color: black;
-  right: 0;
-}
-
-.desktop .browser-header:before ,
-.desktop .browser-header:after {
-  top: 1em;
-}
-
-.cols {
-  display: flex;
-  justify-content: space-between;
-}
-
-@media print {.content > .svg-export.cols {
-  display: flex;
-}}
-
-.col-mobile {
-  width: 26%;
-  font-size: 0.3rem;
-}
-
-.col-desktop {
-  width: 72%;
-  font-size: 0.3rem;
-}
-
-
-
-.browser-content {
-  display: flex;
-}
+@import './browser.css';
 </style>
 
 
@@ -196,7 +45,6 @@
 
 
 <h2 id="masseinheiten">Masseinheiten</h2>
-<h2 id="masseinheiten-1">Masseinheiten</h2>
 <p>Seit dem ausgehenden 18. Jahrhundert gibt es mit dem Meter ein standardisiertes Längenmass, das die Kommunikation über Dimensionen vereinfacht. Da wichtige Vertreter der frühen digitalen Grafikprogramme in Amerika beheimatet waren, basieren die Basis-Technologien für die Grafische Industrie häufig noch immer auf Zoll-Angaben. So werden die Massangaben bei PDF zum Beispiel intern in Einheiten von <sup>1</sup>&frasl;<sub>72</sub>-Zoll gespeichert. Das ist der sogenannte DTP-Punkt.</p>
 <p>Ein wenig anders verhält es sich bei Webseiten in HTML. Als im Dezember 1996 der erste Standard für Cascading Style Sheets (CSS) veröffentlicht wurde, waren in dieser Spezifikation bereits zwei Typen von Masseinheiten definiert: relative und absolute. Für damalige Verhältnisse fast schon visionär kann man da lesen: «Style sheets that use relative units will more easily scale from one medium to another.» (Formatvorlagen, die relative Einheiten verwenden, lassen sich leichter von einem Medium zum anderen skalieren.) Damals war diese Aussage noch vor dem Hintergrund zu verstehen, dass Websites nicht selten ausgedruckt wurden und somit ein Medienwechsel vollzogen wird. Heute ist die gedruckte Website ein zu vernachlässigender Faktor bei der Wahl einer Masseinheit. Vielmehr ist heute Rücksicht auf verschiedene Ausgabegrössen zu nehmen. Diverse Geräteklassen (Mobile, Tablet, Desktop) haben ganz unterschiedliche Anforderungen, und um nicht alle Grössendefinitionen mehrfach zu schreiben, werden viele Dimensionen durch relative Angaben definiert.</p>
 <h2 id="absolute-angaben">Absolute Angaben</h2>
@@ -209,7 +57,6 @@
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
-  padding-top: 1em;
 }
 .example-px .dbox {
   position: relative;
@@ -335,7 +182,6 @@
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
-  padding-top: 1em;
 }
 .example-percentage .left ,
 .example-percentage .right {
@@ -423,7 +269,6 @@
 <style>
 
 .example-em {
-  padding-top: 1em;
   width: 100%;
 }
 
@@ -617,7 +462,6 @@ font-weight: 700;
   justify-content: space-between;
   align-items: stretch;
   align-content: stretch;
-  padding-top: 1em;
 }
 .example-vh .dbox {
   position: relative;
