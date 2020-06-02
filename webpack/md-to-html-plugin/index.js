@@ -7,6 +7,7 @@ var fs = require("fs");
 var path = require("path");
 var marked = require("marked");
 var fm = require("front-matter");
+var hljs = require("highlight.js");
 
 var rootPath = path.resolve(__dirname, "../..");
 var mdReg = /\.md$/g;
@@ -47,11 +48,6 @@ function generateHTML({
         compilation
       });
     } else {
-      console.log({
-        currentFolder,
-        parentPath,
-        generatePath
-      });
       let generateFile = path.join(generatePath, file.replace(mdReg, ".html"));
 
       try {
@@ -68,9 +64,12 @@ function generateHTML({
         var content = fm(data);
 
         data = marked(content.body, {
-          highlight: function(code) {
-            return require("highlight.js").highlightAuto(code).value;
+          highlight: function(code, lang) {
+            return hljs.highlight(lang, code).value;
           }
+          // highlight: function(code) {
+          //   return require("highlight.js").highlightAuto(code).value;
+          // }
         });
 
         if (templateContent) {
@@ -78,7 +77,6 @@ function generateHTML({
 
           let rootPath = ".";
           if (currentFolder !== "./") {
-            console.log("currentFolder", currentFolder);
             rootPath = `.${currentFolder.replace(/[^\/]+/g, "..")}`;
           }
 
@@ -111,7 +109,6 @@ function generateHTML({
       } else {
         // if not markdown file, just copy
         // nodejs v8.5 use copyFileSync
-        console.log("----copy", filePath, generateFile);
         fs.copyFileSync(filePath, generateFile);
         // fs.createReadStream(filePath).pipe(fs.createWriteStream(generateFile));
       }

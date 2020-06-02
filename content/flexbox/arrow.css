@@ -1,0 +1,38 @@
+:root {
+  --arrow-width: 0.15em;
+}
+
+.arrow {
+  font-size: 1.5em;
+  width: 100%;
+  /* top: 3px; */
+}
+.arrow > .shaft {
+  background-color: var(--blue-color);
+
+  display: block;
+  height: var(--arrow-width);
+  position: relative;
+  width: calc(100% - var(--arrow-width) * 6);
+}
+.arrow > .shaft:before,
+.arrow > .shaft:after {
+  background-color: var(--blue-color);
+  content: "";
+  display: block;
+  height: var(--arrow-width);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(var(--arrow-width) * 7);
+}
+.arrow > .shaft:before {
+  transform-origin: top right;
+  transform: translateY(calc(var(--arrow-width) / 2))
+    translateX(calc(var(--arrow-width) * 6)) rotate(45deg);
+}
+.arrow > .shaft:after {
+  transform-origin: bottom right;
+  transform: translateY(calc(0em - var(--arrow-width) / 2))
+    translateX(calc(var(--arrow-width) * 6)) rotate(-45deg);
+}

@@ -8,7 +8,8 @@
   --green-color: #006984;
   --blue-color: #0054a2;
   --gray-color: #e6e8ea;
-  --gray-red: #f00;
+  --red-color: #f00;
+  --brown-color: rgb(178, 112, 0);
 }
 
 ::selection {

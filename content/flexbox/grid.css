@@ -1,0 +1,28 @@
+.example-grid {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  font-size: 1.5em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0.2em;
+  grid-row-gap: 0.2em;
+}
+
+.example-grid > div {
+  background-color: #0054a2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-grid > .grd-w2 {
+  grid-column-end: span 2;
+}
+.example-grid > .grd-h2 {
+  grid-row-end: span 2;
+}
+.example-grid > .grd-special {
+  background-color: #006984;
+}
