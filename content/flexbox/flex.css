@@ -6,6 +6,12 @@
   --example-stroke: 0.2rem;
 }
 
+@media print {
+  :root {
+    --example-height: 18rem;
+  }
+}
+
 .example-content {
   width: 100%;
   height: var(--example-height);

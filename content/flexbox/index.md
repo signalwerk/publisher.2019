@@ -7,7 +7,14 @@ description: Flexbox – ausrichten von Elementen im Web
 @import '../css-units/browser.css';
 @import './flex.css';
 @import './grid.css';
+
+@media print {
+  .content {
+    max-width: 28rem;
+  }
+}
 </style>
+
 
 
 ## Publisher 3 · 2020
@@ -171,10 +178,17 @@ Die Elemente die dann im Container eingefügt werden orientieren sich nun an der
   height: 100%;
 }
 .example-axis--rotate {
-  transform: rotate(90deg) translateY(-100%);
+  transform: rotate(90deg) translateY(-150%);
   transform-origin: top left;
   width: 22.4rem;
 }
+
+@media print {
+  .example-axis--rotate {
+    width: 16.4rem;
+  }
+}
+
 .example-flex--gray div[class^='col-']{
   background-color: #eee;
 
@@ -198,7 +212,7 @@ Die Elemente die dann im Container eingefügt werden orientieren sich nun an der
     </div>
     <div class="example-axis example-axis--rotate">
       <div class="arrow arrow--right">
-        &nbsp;&nbsp;&nbsp;Kreuzachse
+        &nbsp;&nbsp;Kreuzachse
         <span class="shaft"></span>
       </div>
     </div>
