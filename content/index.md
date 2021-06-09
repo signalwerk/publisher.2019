@@ -10,3 +10,14 @@ description: Publisher
 * [Publisher 5 · 2019 – Mikrotypografie im Web – Leerzeichen](./spaces/)
 * [Publisher 4 · 2019 – Design-Systeme im Web](./design-systems/)
 * [Publisher 3 · 2019 – Frontend-Frameworks – Websites heute](./frontend-frameworks/)
+
+
+## Ideas
+* Patterns
+	* Toast
+	* Snackbar
+	* Baustein Progress
+	* Baustein Like
+	* Baustein Hamburger-Menu
+	* Bausteine · Button & Link
+	* [Bausteine - Input-Fields](https://signalwerk.github.io/IAD2019/exercise-input/)
